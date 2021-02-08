@@ -1,0 +1,52 @@
+<html>
+<head><meta charset="UTF-8">
+<style>
+  @font-face {
+    font-family: helvetica;
+    src: '/helvetica.woff';
+  }
+html {
+overflow: hidden;
+text-align: center
+}
+a {
+  text-decoration: none;
+}
+#p {
+text-align: center;
+font: helvetica;
+font-size: 8vw;
+text-shadow: 10px 10px rgba(0,0,0,0.2);
+color: rgba(255,255,255,0.9);
+cursor: pointer;
+user-select: none;
+}
+.gro {color: yellow }
+.ovy {color:blue}
+</style>
+<head><meta charset="UTF-8">
+<body>
+<p id="p" onclick="textchange()">monday lazy thing</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ alert("WARNING: PLEASE DON'T GO ON THIS WEBZONE IF YOU HAVE EPILEPSY OR ARE SUPSCEPTIBLE TO FLASHING LIGHTS. IF YOU CLICK 'OK' THERE WILL BE FLASHING LIGHTS.");
+let screenLog = document.querySelector('#demo');
+document.addEventListener('mousemove', logKey);
+function logKey(e) {
+  let x = (e.clientY + e.clientX)
+  let w = (x).toString(16)
+  document.body.style.backgroundColor = w;
+  document.body.style.backgroundColor = w;
+  document.getElementById("p").style.transform = "SkewX("+(x/20 - 800)+"deg)";
+}
+function textchange(){
+  let arr1 = ['wacky', 'flashy', 'trashy', 'epic', 'dubious', 'painful', '<a href="erfjkl.html"><span class="gro">g</span><span class="ovy">r</span><span class="gro">o</span><span class="ovy">o</span><span class="gro">v</span><span class="ovy">y</span></a>', 'Wild'];
+  var arr1p = parseInt(Math.random() * arr1.length);
+ document.getElementById('p').innerHTML = 'Monday '+arr1[arr1p]+' Thing';
+
+}
+
+</script>
+
+</body>
+</html>

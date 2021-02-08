@@ -1,0 +1,56 @@
+@font-face {
+    font-family: helvetica;
+    src: '/helvetica.woff';
+  }
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    background: 'transparent'; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); 
+  }
+  div#container:hover::-webkit-scrollbar {
+    background: #000; 
+  }
+
+  body {
+    font:helvetica;
+    background-color: darkslateblue;
+    color:#feebee;
+  text-shadow: #000821 2px 2px;
+  font-size:30px;
+  }
+h1 {
+    text-shadow: #000821 4px 4px;  
+}
+input[type=text] {
+    
+    width: 50%;
+    font-size:20px;
+    padding: 16px 16px;
+    display: table;
+    margin:50px 0 50px 25px;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+
+border-radius: 40px 40px;
+        font-size:35px;
+        background: rgba(0, 0, 0, 0); 
+
+  }
+  ::placeholder {
+    color: #8379b9;
+    font-size:35px;
+    margin-left:20px
+  }
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+input[type=text]:focus {
+  background-color: rgba(255,255,255,0.05);
+  z-index: -1;
+
+}

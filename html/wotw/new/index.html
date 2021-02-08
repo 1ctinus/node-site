@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+    <meta charset="UTF-8">
+<head><meta charset="UTF-8">
+
+<body>
+    <div id="top">???day not so fun facts</div>
+    <p id="bezos">Jeff Bezos has currently made <span id="num1">0</span>$ while this page has been open.</p>
+    <p id="musk">Elon Musk has currently made <span id="num2">0</span>$ while this page has been open.</p></p>
+    <p id="american">The average american has currently made <span id="num3">0</span>$ while this page has been open, IF they are working.</p>
+    <p id="musk"></p>
+    <script>
+var i = 1;
+
+setInterval(increase, 100);
+
+function increase() {
+      i++;
+      document.getElementById('num1').innerHTML = (i*253.7).toFixed(1);
+      // https://www.businessinsider.com/how-rich-is-jeff-bezos-mind-blowing-facts-net-worth-2019-4
+      document.getElementById('num2').innerHTML = (i*25).toFixed(1);
+      // https://ia.acs.org.au/article/2020/how-much-money-elon-musk-makes-in-5-minutes.html
+      document.getElementById('num3').innerHTML = (i*0.00537).toFixed(1);
+      // https://www.epi.org/publication/swa-wages-2019/
+}
+    </script>
+</body>
+</html>

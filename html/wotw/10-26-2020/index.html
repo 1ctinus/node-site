@@ -1,0 +1,93 @@
+<html><head><meta charset="UTF-8"><style>
+  body{background-color:#fffdd0;}
+div {  -webkit-transform:rotate(-180deg);
+-moz-transform:rotate(-180deg);
+-o-transform:rotate(-180deg);
+transform:rotate(-180deg);
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+text-decoration: none;
+margin:auto;
+text-align: center;
+font-size: 80px;}
+a:link {
+color: hotpink;}
+a:visited {
+color: #ff00d1;}
+a:hover {
+color: #33dd33;}
+a:active {
+color: #ff7af3;}
+</style>
+<head><meta charset="UTF-8">    
+<body>
+  <script>
+      var truck = [
+          'a.html',
+          'b.html',
+          'c.html',
+          'd.html',
+          'e.html',
+          'f.html',
+          'g.html',
+          'h.html',
+          'i.html',
+          'j.html',
+          'k.html',
+          'l.html',
+          'm.html',
+          'n.html',
+          'o.html',
+          'p.html',
+          'q.html',
+          'r.html',
+          's.html',
+          't.html',
+          'u.html',
+          'v.html',
+          'w.html',
+          'x.html',
+          'y.html',
+          'z.html',
+
+      ];
+  
+      function randomSite() {
+          var i = parseInt(Math.random() * truck.length);
+          location.href = truck[i];
+      }
+  </script>
+  
+  <a href="#" onclick="randomSite();" style="text-decoration: none;" id="mas"><div  id="string"><p >Monday Alphabet Shuffle</p></div></a>
+ <script>
+  document.getElementById("string").onmouseover = function() {mouseOver()};
+  document.getElementById("string").onmouseout = function() {mouseOut()};
+  
+
+  function mouseOut() {
+    document.getElementById("string").innerHTML = "Monday Alphabet Shuffle";
+  }
+  function mouseOver() {
+    string.innerHTML = getRandomSite();
+  }
+  function getRandomSite() {
+    let randomIndex = Math.floor(test.length * Math.random()) // Instead of ParseInt ive used Math.floor cuz that floors the number down examples: 5.4 -> 5; 8.9 -> 8; 0.999 -> 0; 1.00001 -> 1
+    return test[randomIndex] // im returning the random site that gets assigned as mas.innerHTML in mouseOver function
+  }
+  var test = [
+  'Monday Slphabet Ahuffle',
+    'Daymon Alphabet Ehuffls',
+    'Manday Olphabet Shuffle',
+    'Modnay BetAlpha Shuffel',
+    'Monbet Alphaday Shuflef',
+    'Donmay Halpateb Huffles',
+    'Shonday Aabelpht Muffle',
+    'Hanbet Alpmoday Elfshuf',
+    'Moydan Aaelphbt Shefflu',
+    'Yondam Halpebat Huffsle',
+  
+  ]
+
+</script>
+<script src="spaghettus.js"></script>
+</body>
+</html>

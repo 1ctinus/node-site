@@ -1,0 +1,50 @@
+body {
+color: white;
+font-size:1000%;
+font-family: helvetica, sans-serif;
+font-weight:bold;
+margin:0;
+text-shadow: rgb(1, 5, 7) 12px 12px;
+}
+.split {
+height: 50%;
+width: 100%;
+position: fixed;
+}
+.left {
+top: 0;
+background-color: #7e3600;
+ text-shadow: rgb(1, 5, 7) 12px 12px;
+}
+.right {
+bottom: 0;
+background-color:#953232;
+ text-shadow: rgb(1, 6, 7) 12px 12px;
+}
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color:white;
+text-decoration:none
+}
+#but, #rush {
+position: absolute;
+margin: 0 auto;
+user-select: none;
+z-index: 2;
+width: 100vw;
+text-align: center;
+font-size: 50%;
+color: #feebee;
+}
+#but {
+bottom:-90%;
+}
+#but:hover {
+text-shadow:white 12px 12px;
+color:rgb(1, 5, 7);
+cursor: pointer;
+}

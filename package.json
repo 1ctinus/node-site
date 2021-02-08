@@ -1,0 +1,28 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "thing",
+  "main": "index.js",
+  "scripts": {
+    "test": "ntest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1ctinus/node-site.git"
+  },
+  "keywords": [
+    "bad",
+    "test",
+    "noob"
+  ],
+  "author": "1ctinus",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/1ctinus/node-site/issues"
+  },
+  "homepage": "https://github.com/1ctinus/node-site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  }
+}

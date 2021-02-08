@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(270deg, #aaaa00, #009200);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
+}
+@font-face {
+    font-family: helvetica;
+    src: '/helvetica.woff';}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+#d{position: absolute; color:rgb(218, 0, 0);  font-size: 80px; z-index: -2; left: 0; right: 0; text-align: center; text-shadow: #220022 4px 4px;}
+#b {font-size:10vh; padding: 200px 75px 0 75px; font-family: helvetica, Times, serif; text-shadow: #220022 4px 4px;  color: white; text-align: center;  mix-blend-mode: luminosity;
+ }
+#c {width: 8%; margin: auto;  margin-top:-8%;position: absolute;bottom: 5%; font-size: 5vh;background-color: rgba(100,100,100,0.3);border-radius: 10vh; left: 0;  -webkit-user-select: none;         
+    -moz-user-select: none; 
+    user-select: none;
+right: 0;
+ text-align: center; cursor: pointer; z-index: 1; padding:1.5% 2% 1.5% 2%; }
+#c:hover {background-color: rgba(100,100,100,0.4);} 
+#peli{ position:absolute; display:block; width:100%; margin-left: -8px;margin-right: 0; top:1100px}
+#cap {position:absolute; top: 1000px; text-align: center;}
+::-webkit-scrollbar {
+    width: 0px;
+  }

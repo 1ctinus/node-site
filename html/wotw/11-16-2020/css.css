@@ -1,0 +1,11 @@
+@font-face {
+  font-family: helvetica;
+  src: '/helvetica.woff';
+}
+#c {width: 8%; margin: auto;  margin-top:-8%;position: absolute;bottom: 5%; font-size: 5vh;background-color: rgba(100,100,100,0.3);border-radius: 10vh; left: 0;  -webkit-user-select: none;         
+  -moz-user-select: none; 
+  user-select: none;
+right: 0;
+text-align: center; cursor: pointer; z-index: 1; padding:1.5% 2% 1.5% 2%; }
+#letter {position: absolute; bottom:2%}
+body {overflow: hidden; font:helvetica; filter: saturate(2);}
