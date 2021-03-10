@@ -1,58 +1,25 @@
+mixin haiku(title, date, line1, line2, line3)
+  h2
+    span.date #{date}
+    | ~
+    span.name #{title}
+  p
+    | #{line1}
+    br
+    | #{line2}
+    br
+    | #{line3}
 head
   meta(charset='UTF-8')
   title haikus
   link(rel='icon', href='icon.png', type='image/png', sizes='64x64')
 h1#tit haikus
-h2
-  span.date 02-04-2021
-  | ~
-  span.name Day
-p
-  | Sure the last was bad
-  br
-  | Just remember that today
-  br
-  | Is a brand new day!
-h2
-  span.date 02-06-2021
-  | ~
-  span.name water
-p
-  | nothing just quite tastes
-  br
-  | as refreshing and so good
-  br
-  | as just plain water
-h2
-  span.date 02-05-2021
-  | ~
-  span.name node
-p
-  | programming is hard
-  br
-  | servers are even harder
-  br
-  | pain and misery
-h2
-  span.date 02-03-2021
-  | ~
-  span.name meta
-p
-  | are these real haikus?
-  br
-  | ain&apos;t haikus about nature?
-  br
-  | these all kinda suck
-h2
-  span.date 02-03-2021
-  | ~
-  span.name &apos;sed&apos;
-p
-  | hope this won&apos;t be lost
-  br
-  | cause i suck at programming
-  br
-  | f for this haiku
++haiku("The Weather", "03-10-2021", "can somebody please", "just describe what's going on", "about this weather")
++haiku("Water", "02-06-2021", "nothing just quite tastes","as refreshing and so good",  "as just plain water")
++haiku("Day", "02-04-2021", "Sure the last was bad", "Just remember that today", " Is a brand new day!")
++haiku("node", "02-05-2021", "programming is hard", "servers are even harder", "pain and misery")
++haiku("meta", "02-03-2021", "are these real haikus?", "ain&apos;t haikus about nature?", "these all kinda suck")
++haiku("&apos;sed&apos;", "02-03-2021", "hope this won&apos;t be lost","cause i suck at programming", "f for this haiku")
 h2
   span.date 02-03-2021
   | ~

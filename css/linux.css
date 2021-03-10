@@ -6,6 +6,11 @@
     color:#fff;
     background-color: #16181b;
 }
+footer {
+    text-align: center;
+    font-size: 25px;
+    font-family: helvetica; 
+}
 h2 {
     text-align: center;
     font-family: helvetica; 

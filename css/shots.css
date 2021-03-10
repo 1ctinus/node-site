@@ -1,0 +1,36 @@
+body {
+    background-color: #005929;
+    font-family: Helvetica, sans-serif
+}
+
+h2 {
+    font-size: 90px;
+}
+
+.a {
+    color: #cf65bc;
+    text-shadow: #0c0909 6px 6px;
+}
+
+.b {
+    color: #ff3200;
+    text-shadow: #0c070c 6px 6px;
+}
+
+h1 {
+    margin-left: 5%;
+    font-size: 60px;
+    color: #9b8641;
+    text-shadow: #0b010c 5px 5px;
+}
+
+img {
+    margin-left: 10%;
+    width: 1000px;
+    height: auto;
+}
+
+.legal {
+    color: red;
+    font-size: 20px;
+}

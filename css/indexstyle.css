@@ -6,6 +6,19 @@
 font-family: helvetica;
 src: url('helvetica.woff');
 }
+::-moz-selection
+{
+    text-shadow: none;
+    background: #051422;
+    color: #fff;
+}
+::selection {
+    text-shadow: none;
+    background: #051422;
+    color: #fff;
+}
+
+
 .logo {margin:auto; text-align: center; font-size:11.5vw;}
 #svga { color: #00f; mix-blend-mode: lighten; position: absolute; text-align: center;left:1%;right:0%;margin-top:-1%; }
 #svgb  { color: #0f0;mix-blend-mode: lighten;position: absolute; text-align: center;left:0%;right:0%; vertical-align:top; margin-top:-0.5%}
