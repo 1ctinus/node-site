@@ -13,7 +13,7 @@ app.get('/', function (req, res){
 })
 app.get('/*', function (req, res) {
     if (fs.existsSync('pug/' + req.params[0] + '.pug')) {
-        res.send("<!DOCTYPE html><link href='" + req.params[0] + ".css' rel='stylesheet'>" + pug.renderFile('pug/' + req.params[0] + '.pug'))
+        res.send("<!DOCTYPE html><link href='css/" + req.params[0] + ".css' rel='stylesheet'>" + pug.renderFile('pug/' + req.params[0] + '.pug'))
     }
     else {
         res.send(
