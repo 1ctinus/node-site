@@ -7,7 +7,7 @@ const port = 80
 const hostname = '0.0.0.0'
 app.use(express.static(path.join(__dirname, 'css')));
 app.use(express.static(path.join(__dirname, 'html')));
-app.use('/img', express.static(path.join(__dirname, 'img')))
+// app.use('/img', express.static(path.join(__dirname, 'img')))
 app.get('/', function (req, res){
     res.send(pug.renderFile('pug/index.pug'))
 })
