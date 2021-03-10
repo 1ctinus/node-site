@@ -108,7 +108,7 @@ function search() {
         a("heads")
       } else (a("tails"))
       break; case "egg": case "eggs":
-      link.href = "search/egg.html"
+      link.href = "search/egg.svg"
       break; case "delete":
       while (document.firstChild) {
         document.removeChild(document.firstChild);
