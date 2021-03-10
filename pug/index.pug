@@ -27,7 +27,7 @@ input#Dave(type='text', placeholder='Do a quick search, maybe ask some questions
 script(src='search/spasearchi.js')
 p#output.paragraph
 p(style='font-size:72px;')
-  | more hrefs,
+  span#more more hrefs,
   span.hrefs
     br
     +menutext('pics', '/pics', 'rgb(255, 0, 106)', 'rgb(25, 0, 10)')
@@ -38,6 +38,7 @@ p(style='font-size:72px;')
       var data2 = [
         ['self', '/self', 'rgb(112, 255, 245)', 'rgb(3, 7, 7)'],
         ['plans', '/plans', 'rgb(255, 64, 153)', 'rgb(30, 0, 12)'],
+        ['software', '/software', '	#009090', '#000808'],
         ['discord', 'discord', 'rgb(140, 132, 255)', 'rgb(2, 2, 5)'],
         ['reddit', 'https://reddit.com/user/1ctinus', 'rgb(255, 89, 0);', 'rgb(25, 8, 0)'],
         ['haikus', 'haikus', '#EEFF00', '#161500'],

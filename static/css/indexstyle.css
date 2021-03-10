@@ -191,6 +191,7 @@ input[type=text] {
 }
 
 ::placeholder {
+  font-family: Helvetica;
   color: #79a3b9;
   font-size: 35px;
   margin-left: 20px
@@ -211,4 +212,9 @@ input[type=text]:focus {
 display:inline-block;
 margin-left: 20px;
 transition: 0.3s;
+}
+@media only screen and (max-width: 800px) {
+  #paragraph, .welc, #Dave, #more, .preview {
+    display: none;
+  }
 }
