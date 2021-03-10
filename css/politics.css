@@ -1,0 +1,24 @@
+@font-face {
+    font-family: helvetica;
+    src: '/helvetica.woff';
+}
+
+body {
+    background-color: #330800;
+    font-family: helvetica;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    text-shadow: #0c0505 4px 4px;
+}
+
+p {
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+    position: absolute;
+    z-index: -1;
+    top: 14%;
+}

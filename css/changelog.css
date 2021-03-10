@@ -1,0 +1,61 @@
+:root {
+    --var1: #378836;
+    --var2: #119754;
+  }
+
+  @font-face {
+    font-family: helvetica;
+    src: url('/helvetica.woff');
+  }
+
+  body {
+    background-color: #440044;
+    font-family: helvetica;
+  }
+
+  ul {
+    color: white;
+    font-size: 40px;
+    text-shadow: #1f001f 4px 4px;
+  }
+
+  h1 {
+    color: gold;
+    text-shadow: #240024 8px 8px;
+    font-size: 60px;
+    margin: -10px 0 -10px 0;
+  }
+
+  #change {
+    color: var(--var1);
+    text-shadow: #000c03 6px 6px;
+
+  }
+
+  p {
+    font-weight: 900;
+    font-size: 90px;
+    margin-top: -10px;
+    margin-bottom: 25px;
+  }
+
+  #log {
+    color: var(--var2);
+    text-shadow: #000301 6px 6px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #440044;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #290029;
+  }
+
+  div#container:hover::-webkit-scrollbar {
+    background: #000;
+  }
