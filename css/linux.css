@@ -1,0 +1,23 @@
+@font-face {
+    font-family: helvetica;
+    src: url('helvetica.woff');
+    }
+* {
+    color:#fff;
+    background-color: #16181b;
+}
+h2 {
+    text-align: center;
+    font-family: helvetica; 
+    font-size: 150px;
+    transform: rotate(180deg);
+    text-shadow: #060607 -4px -4px;
+}
+p {
+    font-size:20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: sans-serif;
+    text-indent: 50px;
+    text-shadow: #060607 1px 1px;
+}
