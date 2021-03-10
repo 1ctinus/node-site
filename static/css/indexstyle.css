@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: helvetica;
-  src: url('helvetica.woff');
+  src: url('/helvetica.woff');
 }
 
 ::-moz-selection {
@@ -98,14 +98,9 @@ body {
   color: rgb(255, 0, 106);
 }
 
-#bloc {
+#block {
   text-shadow: rgb(18, 25, 3) 6px 6px;
   color: rgb(125, 173, 21);
-}
-
-#self {
-  text-shadow: rgb(3, 7, 7) 6px 6px;
-  color: rgb(112, 255, 245);
 }
 
 #game {
@@ -113,44 +108,14 @@ body {
   color: rgb(45, 189, 21);
 }
 
-#future {
-  text-shadow: rgb(30, 0, 12) 6px 6px;
-  color: rgb(255, 64, 153);
-}
-
 #discord {
   text-shadow: rgb(2, 2, 5) 6px 6px;
   color: rgb(140, 132, 255);
 }
 
-#reddit {
-  text-shadow: rgb(25, 8, 0) 6px 6px;
-  color: rgb(255, 89, 0);
-}
-
-#changelog {
-  text-shadow: rgb(102, 17, 0) 6px 6px;
-  color: rgb(255, 170, 17);
-}
-
-#wurtz {
-  text-shadow: rgb(0, 12, 7) 6px 6px;
-  color: rgb(0, 255, 167);
-}
-
 #politics {
   text-shadow: rgb(25, 25, 23) 6px 6px;
   color: rgb(255, 255, 232);
-}
-
-#github {
-  color: #6F63B5;
-  text-shadow: #060616 6px 6px;
-}
-
-#haikus {
-  color: #EEFF00;
-  text-shadow: #161500 6px 6px;
 }
 
 .logo {

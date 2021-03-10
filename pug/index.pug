@@ -1,3 +1,5 @@
+mixin menutext(title, href, color, shadowColor)
+  a(style='text-shadow: '+shadowColor+' 6px 6px;color: '+color, href=href) #{title} 
 doctype html
 head
   meta(charset='UTF-8')
@@ -28,24 +30,24 @@ p(style='font-size:72px;')
   | more hrefs,
   span.hrefs
     br
-    a#pics(href='pics') pics 
+    +menutext('pics', '/pics', 'rgb(255, 0, 106)', 'rgb(25, 0, 10)')
     a(href='coming-soon', style='text-decoration:none')
-      span#block block
-      | -
+      span#block block-
       span#game game 
-    a#self(href='self') self 
-    a#future(href='plans') future 
-    a#discord(href='discord') discord 
-    a#reddit(href='https://reddit.com/user/1ctinus') reddit 
-    a#haikus(href='haikus') haikus 
+    +menutext('self', '/self', 'rgb(112, 255, 245)', 'rgb(3, 7, 7)')
+    +menutext('plans', '/plans', 'rgb(255, 64, 153)', 'rgb(30, 0, 12)')
+    +menutext('discord', 'discord', 'rgb(140, 132, 255)', 'rgb(2, 2, 5)')
+    +menutext('reddit', 'https://reddit.com/user/1ctinus', 'rgb(255, 89, 0);', 'rgb(25, 8, 0)')
+    +menutext('haikus', 'haikus', '#EEFF00', '#161500')
     br
-    a#changelog(href='changelog') changelog 
-    a#wurtz(href='coming-soon') wurtz 
-    a(href='politics', style='text-decoration:none')
+    +menutext('changelog', 'changelog', 'rgb(255, 170, 17)', 'rgb(102, 17, 0)')
+    +menutext('wurtz', 'coming-soon', 'rgb(0, 255, 167)', 'rgb(0, 12, 7)')
+    +menutext('linux', '/linux', ' rgb(255, 190, 153)', 'rgb(30, 24, 12)')
+    a(href='politics', style='text-decoration:none') 
       span#discord pol
       span#politics it
       span#pics ics
-    a#github(href='https://github.com/1ctinus/') github 
+    +menutext('github','https://github.com/1ctinus','#6F63B5', '#060616')
 p(style='font-size:72px;')
   br
   br
@@ -57,4 +59,4 @@ p(style='font-size:72px;')
     span.wotw-blue The 
     span.wotw-blue Week!
 a(href='wotw/12-07-2020')
-  img.preview(src='wotwpreview.PNG')
+  img.preview(src='/pics/wotwpreview.PNG')
