@@ -34,19 +34,22 @@ p(style='font-size:72px;')
     a(href='coming-soon', style='text-decoration:none')
       span#block block-
       span#game game 
-    +menutext('self', '/self', 'rgb(112, 255, 245)', 'rgb(3, 7, 7)')
-    +menutext('plans', '/plans', 'rgb(255, 64, 153)', 'rgb(30, 0, 12)')
-    +menutext('discord', 'discord', 'rgb(140, 132, 255)', 'rgb(2, 2, 5)')
-    +menutext('reddit', 'https://reddit.com/user/1ctinus', 'rgb(255, 89, 0);', 'rgb(25, 8, 0)')
-    +menutext('haikus', 'haikus', '#EEFF00', '#161500')
-    br
-    +menutext('changelog', 'changelog', 'rgb(255, 170, 17)', 'rgb(102, 17, 0)')
-    +menutext('wurtz', 'coming-soon', 'rgb(0, 255, 167)', 'rgb(0, 12, 7)')
-    +menutext('linux', '/linux', ' rgb(255, 190, 153)', 'rgb(30, 24, 12)')
+    -
+      var data2 = [
+        ['self', '/self', 'rgb(112, 255, 245)', 'rgb(3, 7, 7)'],
+        ['plans', '/plans', 'rgb(255, 64, 153)', 'rgb(30, 0, 12)'],
+        ['discord', 'discord', 'rgb(140, 132, 255)', 'rgb(2, 2, 5)'],
+        ['reddit', 'https://reddit.com/user/1ctinus', 'rgb(255, 89, 0);', 'rgb(25, 8, 0)'],
+        ['haikus', 'haikus', '#EEFF00', '#161500'],
+        ['changelog', 'changelog', 'rgb(255, 170, 17)', 'rgb(102, 17, 0)'],
+        ['wurtz', 'coming-soon', 'rgb(0, 255, 167)', 'rgb(0, 12, 7)'],
+        ['linux', '/linux', ' rgb(255, 190, 153)', 'rgb(30, 24, 12)']]
+    each object in data2
+      +menutext(object[0], object[1], object[2], object[3])
     a(href='politics', style='text-decoration:none') 
       span#discord pol
       span#politics it
-      span#pics ics
+      span#pics ics 
     +menutext('github','https://github.com/1ctinus','#6F63B5', '#060616')
 p(style='font-size:72px;')
   br
