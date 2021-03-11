@@ -169,7 +169,7 @@ div#container:hover::-webkit-scrollbar {
 
 input[type=text] {
   width: 80%;
-  padding: 16px;
+  padding-left: 16px;
   display: table;
   margin: 0 auto;
   box-sizing: border-box;
