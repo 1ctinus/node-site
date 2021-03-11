@@ -3,12 +3,42 @@ const fs = require('fs')
 const path = require('path');
 const pug = require('pug');
 const app = express()
-const port = 80
-const hostname = '0.0.0.0'
-app.use(express.static(path.join(__dirname, 'css')));
+const port = 8000
+const hostname = 'localhost'
+const { exec } = require("child_process");
+// neofetch --stdout
+app.get('/neofetch', function (req, res) {
+
+    exec("neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:blue\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"", (error, stdout, stderr) => {
+        if (error) {
+            res.send(error)
+            return;
+        }
+        if (stderr) {
+            res.send(stderr);
+            return;
+        }
+        res.send("<etc>"+stdout+ "</etc>")
+    });
+})
+app.get('/testing', function (req, res) {
+
+    exec("uptime", (error, stdout, stderr) => {
+        if (error) {
+            res.send(error)
+            return;
+        }
+        if (stderr) {
+            res.send(stderr);
+            return;
+        }
+        res.send(stdout)
+    });
+})
+// app.use(express.static(path.join(__dirname, 'css')));
 app.use(express.static(path.join(__dirname, 'static')));
 // app.use('/img', express.static(path.join(__dirname, 'img')))
-app.get('/', function (req, res){
+app.get('/', function (req, res) {
     res.send(pug.renderFile('pug/index.pug'))
 })
 app.get('/*', function (req, res) {
