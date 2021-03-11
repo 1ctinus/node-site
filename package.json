@@ -23,6 +23,7 @@
   "homepage": "https://github.com/1ctinus/node-site#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "serve-favicon": "^2.5.0"
   }
 }
