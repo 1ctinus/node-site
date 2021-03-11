@@ -8,7 +8,7 @@
   .flex-container > div {
   display: inline-block;
     background-color: #f1f1f1;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 10px;
     text-align: center;
     font-size: 20px;
@@ -38,7 +38,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    border-radius: 10px;
+    border-radius: 20px;
     background: rgba(36, 62, 206, 0.6);
     color: #fff;
     visibility: hidden;
@@ -67,3 +67,9 @@
 footer, h1 {
     text-align: center;
 }
+footer {
+    position: absolute;
+    left: 0px; right: 0px;
+    bottom: 10px;
+    margin: 0 0;
+  }

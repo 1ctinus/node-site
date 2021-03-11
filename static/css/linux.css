@@ -16,6 +16,7 @@ h2 {
     font-family: helvetica; 
     font-size: 150px;
     transform: rotate(180deg);
+    margin: -20px 0px;
     text-shadow: #060607 -4px -4px;
 }
 p {

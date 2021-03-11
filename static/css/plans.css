@@ -11,30 +11,30 @@ body {
     font-size: 40px;
 }
 
-.b {
+.notsoon-container {
     position: absolute;
     z-index: -1;
-    top: -40;
+    top: 0;
     left: 50%;
     width: 50%
 }
 
-.a {
+.soon-container {
     width: 50%;
     word-wrap: break-word;
 }
 
-.c {
+.soon-title {
     text-shadow: rgb(25, 0, 10) 6px 6px;
     color: rgb(255, 0, 106);
 }
 
-.d {
+.title-brightred {
     text-shadow: rgb(12, 0, 0) 6px 6px;
     color: rgb(255, 0, 0);
 }
 
-.e {
+span.title-dullred {
     color: #e06767;
     text-shadow: #0c0505 6px 6px;
 }

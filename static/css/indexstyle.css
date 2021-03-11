@@ -99,16 +99,6 @@ body {
   color: rgb(255, 0, 106);
 }
 
-#block {
-  text-shadow: rgb(18, 25, 3) 6px 6px;
-  color: rgb(125, 173, 21);
-}
-
-#game {
-  text-shadow: rgb(6, 25, 3) 6px 6px;
-  color: rgb(45, 189, 21);
-}
-
 #discord {
   text-shadow: rgb(2, 2, 5) 6px 6px;
   color: rgb(140, 132, 255);
