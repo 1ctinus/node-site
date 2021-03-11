@@ -1,0 +1,15 @@
+@font-face {
+    font-family: fira;
+    src: url('https://raw.githubusercontent.com/mozilla/Fira/master/woff/FiraMono-Bold.woff');
+  }
+* {
+    background-color: #10121b;
+    color: #eeeeee;
+    font-family: fira;
+    font-size: 22px;
+    display: inline-block;
+}
+etc {
+    white-space: pre;
+    color: #2c7f93;
+}
