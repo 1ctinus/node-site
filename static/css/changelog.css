@@ -23,7 +23,7 @@
     color: gold;
     text-shadow: #240024 8px 8px;
     font-size: 60px;
-    margin: -10px 0 -10px 0;
+    margin: 0 0 -10px 0;
   }
 
   #change {
@@ -59,3 +59,10 @@
   div#container:hover::-webkit-scrollbar {
     background: #000;
   }
+  etc {
+    white-space: pre-wrap;
+    color:white;
+    font-size: 20px;
+    background-color: 20px;
+    margin: 50px;
+}
