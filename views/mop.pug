@@ -1,0 +1,11 @@
+head 
+    title time mop
+audio(controls='', autoplay='', loop='', src='https://billwurtz.com/time%20mop.mp3')
+h1#number 10
+script.
+  var i = 10;
+  var myVar = setInterval(lowerVar, 1400);
+  function lowerVar() {
+  i--;
+  document.getElementById("number").innerHTML = i;
+  }

@@ -2,10 +2,7 @@ mixin menutext(title, href, color, shadowColor)
   a(style='text-shadow: '+shadowColor+' 6px 6px;color: '+color, href=href) #{title} 
 doctype html
 head
-  meta(charset='UTF-8')
   title 1ctinus&apos; very cool webzone on the internets
-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  link#css(rel='stylesheet', href='/css/indexstyle.css')
 .logo
   p#svga 1ctinus.me
   p#svgb 1ctinus.me
@@ -15,11 +12,11 @@ script(src='loop.js')
 p#paragraph.paragraph
   | Here is my website that looks like it came from 1998, now running on
   | Node.js and Caddy.
-  | I draw heavy inspirations from bill wurtz, which should be obvious if you know me or have eyes on how I designed
-  | this very epic webzone.
+  | I draw heavy inspirations from bill wurtz, which should be obvious if you look on how I designed
+  | this very epic webzone. (Although I am always expirementing!)
   | This website is always in development, so it will never get &quot;finished&quot;, per se. All of the code should have been
   | written by be.
-  | I am a hobby developer who has an interest in Linux, C, and some web dev. Check out my stuff on github.
+  | I am a hobby developer who has an interest in Linux, and some web dev. I like to hop from different languages. Check out my stuff on github.
   | This webzone is rather experimental, so that&apos;s why nothing looks very professional nor plain. have a good day.
 br
 input#Dave(type='text', placeholder='Do a quick search, maybe ask some questions and find some EGGS on the way.', autocomplete='off')
@@ -39,7 +36,8 @@ p(style='font-size:72px;')
         ['reddit', 'https://reddit.com/user/1ctinus', 'rgb(255, 89, 0);', 'rgb(25, 8, 0)'],
         ['haikus', 'haikus', '#EEFF00', '#161500'],
         ['changelog', 'changelog', 'rgb(255, 170, 17)', 'rgb(102, 17, 0)'],
-        ['linux', '/linux', ' rgb(255, 190, 153)', 'rgb(30, 24, 12)']]
+        ['linux', '/linux', ' rgb(255, 190, 153)', 'rgb(30, 24, 12)'],
+        ['neofetch', '/neofetch', '#9da67a', '#061004']]
     each object in data2
       +menutext(object[0], object[1], object[2], object[3])
     a(href='politics', style='text-decoration:none') 

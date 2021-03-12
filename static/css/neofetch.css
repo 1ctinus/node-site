@@ -7,7 +7,7 @@ body {
 }
 etc, p {
     color: #eeeeee;
-    font-family: fira;
+    font-family: fira, monospace;
     font-size: 22px;
     display: inline-block;
 }

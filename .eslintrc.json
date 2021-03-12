@@ -2,7 +2,8 @@
     "env": {
         "node": true,
         "es2021": true,
-        "amd": true
+        "amd": true,
+        "browser": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {

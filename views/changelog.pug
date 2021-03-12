@@ -3,6 +3,7 @@ head
   meta(charset='UTF-8')
   title changelog
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  link#css(rel='stylesheet', href='/css/changelog.css')
   script.
     $(document).ready(function () {
     $("p").mouseover(function () {
@@ -17,7 +18,8 @@ head
 p
   span#change change
   span#log log
-h1 disclaimer: changelogs are pretty lame. not maintained after 2020.
+h1 disclaimer: changelogs are pretty lame. not maintained after 2020. heres my git log, though.
+etc !{git}
 h1 11/05/2020
 ul
   li fancier scrollbars

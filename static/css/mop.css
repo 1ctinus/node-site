@@ -1,0 +1,38 @@
+@font-face {
+    font-family: helvetica;
+    src: 'https://1ctinus.me/helvetica.woff';
+}
+
+body {
+    overflow: hidden;
+    /* Hide scrollbars */
+}
+
+h1 {
+    font-size: 200px;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-family: helvetica;
+    left: 50%;
+    transform: translate(-50%, 0)
+}
+
+audio {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 5%;
+}
+
+@keyframes example {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -30%;
+    }
+}
