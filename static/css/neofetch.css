@@ -2,8 +2,10 @@
     font-family: fira;
     src: url('https://raw.githubusercontent.com/mozilla/Fira/master/woff/FiraMono-Bold.woff');
   }
-* {
+body {
     background-color: #10121b;
+}
+etc, p {
     color: #eeeeee;
     font-family: fira;
     font-size: 22px;

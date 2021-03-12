@@ -1,55 +1,61 @@
-const express = require('express')
-const fs = require('fs')
-const path = require('path');
-const pug = require('pug');
-const app = express()
+const express = require('express')                      // express
+const app = express()                                   // express
+const fs = require('fs')                                // file system
+const path = require('path');                           // add static
+const pug = require('pug');                             // pug for... pug
+const { exec } = require("child_process");              // for neofetch
+const favicon = require('serve-favicon');               // favicon
+
 const port = 8000
-const hostname = 'localhost'
-const { exec } = require("child_process");
-var favicon = require('serve-favicon');
-// neofetch --stdout
+const hostname = 'localhost' 
+
 app.use(favicon(__dirname + '/static/favicon.ico'));
+app.set('view engine', 'pug')
 app.get('/neofetch', function (req, res) {
 
     exec("neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:#2c7f93\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"", (error, stdout, stderr) => {
-        // neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:blue\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"
+    
         if (error) {
-            res.send(error)
+            res.status(500).send(error)
             return;
         }
+    
         if (stderr) {
-            res.send(stderr);
+            res.status(500).send(stderr);
             return;
         }
-        const compiledFunction = pug.compileFile('pug/neofetch-temp.pug');
-        res.send(compiledFunction({
-            fetch: stdout
-          }))
-    });
+        res.render('neofetch-temp.pug', {fetch: stdout})
+    })
 })
-app.get('/testing', function (req, res) {
-    const compiledFunction = pug.compileFile('pug/imp.pug');
-    res.send(compiledFunction({
-        name: 'pug'
-      }))
-})
-// app.use(express.static(path.join(__dirname, 'css')));
+// app.get('/testing', function (req, res) {
+//     const compiledFunction = pug.compileFile('views/imp.pug');
+//     res.send(compiledFunction({
+//         name: 'pug'
+//       }))
+// })
 app.use(express.static(path.join(__dirname, 'static')));
-// app.use('/img', express.static(path.join(__dirname, 'img')))
+
 app.get('/', function (req, res) {
-    res.send(pug.renderFile('pug/index.pug'))
+    res.render('index')
 })
 
-app.get('/*', function (req, res) {
-    if (fs.existsSync('pug/' + req.params[0] + '.pug')) {
-        res.send("<!DOCTYPE html><link href='css/" + req.params[0] + ".css' rel='stylesheet'>" + pug.renderFile('pug/' + req.params[0] + '.pug'))
+app.get('/:page', function (req, res) {
+    // Redirect if no slash at the end
+    if (req.url.endsWith('/')) {
+        res.redirect(301, (req.url).substring(0, (req.url).length - 1))
+    }
+    
+    // Normal response goes here
+    else if (fs.existsSync('views/' + req.url + '.pug')) {
+        res.render('template.pug', {file: pug.renderFile(`views/${req.url}.pug`), style: `css/${req.url}.css`})
     }
     else {
-        res.send(
+        res.status(200).send(
             fs.readFileSync('static/404.html', 'utf8')
         )
     }
 })
+
 app.listen(port, hostname, () => {
 
     console.log(`Example app listening at http://localhost:${port}`)

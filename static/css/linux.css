@@ -6,7 +6,7 @@
     color:#fff;
     background-color: #16181b;
 }
-footer {
+footer, h3 {
     text-align: center;
     font-size: 25px;
     font-family: helvetica; 
@@ -26,4 +26,11 @@ p {
     font-family: sans-serif;
     text-indent: 50px;
     text-shadow: #060607 1px 1px;
+}
+img {
+    width: 80%;
+    margin-top:100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
