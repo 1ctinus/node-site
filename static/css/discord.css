@@ -1,28 +1,27 @@
 body {
-    background-color: black;
-    overflow-y: hidden;
-  }
+  background-color: black;
+  overflow-y: hidden;
+}
 
-  p {
-    color: white;
-    font-family: serif;
-    font-size: 900px;
-    font-weight: 100;
+p {
+  color: white;
+  font-family: serif;
+  font-size: 900px;
+  font-weight: 100;
+}
 
-  }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
+::-webkit-scrollbar-track {
+  background: #000;
+}
 
-  ::-webkit-scrollbar-track {
-    background: #000;
-  }
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: #ccc;
-  }
-
-  div#container:hover::-webkit-scrollbar {
-    background: #fff;
-  }
+div#container:hover::-webkit-scrollbar {
+  background: #fff;
+}

@@ -15,7 +15,7 @@ var ew = ["nasty", "disgusting", "putrid", "gross", "smelly", "stinky",]
         var noun = ["Jesus Christ", "Margaret Thatcher", "a lawnchair", "a daisy", "Mexico", "yo mama", "a hamburger","Millard Fillmore" ,"a stick","Minecraft", "a tsp of nutmeg", "an apple", "Brutus", "Jeff Bezos", "Biden", "Larry", "you"]
         var verb = ["run", "shriek","jump","die","fall","flip over","panic","scramble","tremble"]
         var large = ["the Eiffel Tower", "IC 1101", "Big Chungus", "the comically large spoon", "the earth", "The Milky Way"]
-        var short = [, "a leaf" , "a hair width" , "a cell", "a pin", "an atom", "a molecule", "your bandwith", "a sand grain", "an index finger", "Peter Dinklage"]
+        var short = [ "a leaf" , "a hair width" , "a cell", "a pin", "an atom", "a molecule", "your bandwith", "a sand grain", "an index finger", "Peter Dinklage"]
         // spaghetti! 
         var chungusp = parseInt(Math.random() * chungus.length);
         var badjp = parseInt(Math.random() * badj.length);

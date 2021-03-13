@@ -1,83 +1,86 @@
-@font-face {font-family: helvetica;src: url('helvetica.woff') }@keyframes joe {
-    0% {
-      background-color: rgb(134, 0, 51);
-    }
+@font-face {
+  font-family: helvetica;
+  src: url('helvetica.woff')
+}
 
-    33.3% {
-      background-color: rgb(150, 6, 42);
-    }
-
-    66.6% {
-      background-color: rgb(150, 6, 119);
-    }
-
-    100% {
-      background-color: rgb(134, 0, 51);
-    }
+@keyframes joe {
+  0% {
+    background-color: rgb(134, 0, 51);
   }
-
-  ::-webkit-scrollbar {
-    width: 15px;
+  33.3% {
+    background-color: rgb(150, 6, 42);
   }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
+  66.6% {
+    background-color: rgb(150, 6, 119);
   }
-
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
+  100% {
+    background-color: rgb(134, 0, 51);
   }
+}
 
-  div#container:hover::-webkit-scrollbar {
-    background: rgba(0, 0, 0, 0.8);
-  }
+::-webkit-scrollbar {
+  width: 15px;
+}
 
-  body {
-    transition-timing-function: ease-in-out;
-    animation-duration: 1000s;
-    animation-iteration-count: infinite;
-    animation-name: joe;
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center; font-family:helvetica;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  .name {
-    display: inline;
-    color: rgb(78, 20, 153);
-    text-shadow: #050014 6px 6px;
-  }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
 
-  .date {
-    color: rgb(108, 203, 184);
-    text-shadow: #131400 6px 6px;
-  }
+div#container:hover::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0.8);
+}
 
-  h2 {
-    font-size: 75px;
-    text-align: center;
-    text-shadow: #140800 5px 5px;
-    color: white
-  }
+body {
+  transition-timing-function: ease-in-out;
+  animation-duration: 1000s;
+  animation-iteration-count: infinite;
+  animation-name: joe;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  font-family: helvetica;
+}
 
-  p {
-    font-size: 70px;
-    text-align: center;
-    text-shadow: rgba(20, 8, 0, 0.5) 7px 7px;
-    color: white;
-    margin-top: -2%;
-  }
+.name {
+  display: inline;
+  color: rgb(78, 20, 153);
+  text-shadow: #050014 6px 6px;
+}
 
-  #tit {
-    color: #EEFF00;
-    text-shadow: #161500 6px 6px;
-    font-size: 100px;
-    transform: scaleY(-1);
-    margin: 0 45% 0 42.5%;
-    cursor: default;
-    transition: 1s;
-  }
+.date {
+  color: rgb(108, 203, 184);
+  text-shadow: #131400 6px 6px;
+}
 
-  #tit:hover {
-    transform: scaleY(1);
-  }
+h2 {
+  font-size: 75px;
+  text-align: center;
+  text-shadow: #140800 5px 5px;
+  color: white
+}
+
+p {
+  font-size: 70px;
+  text-align: center;
+  text-shadow: rgba(20, 8, 0, 0.5) 7px 7px;
+  color: white;
+  margin-top: -2%;
+}
+
+#tit {
+  color: #EEFF00;
+  text-shadow: #161500 6px 6px;
+  font-size: 100px;
+  transform: scaleY(-1);
+  margin: 0 45% 0 42.5%;
+  cursor: default;
+  transition: 1s;
+}
+
+#tit:hover {
+  transform: scaleY(1);
+}

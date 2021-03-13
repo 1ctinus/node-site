@@ -1,27 +1,16 @@
 body {
     background-color: #21004c;
-    font-family: Helvetica, sans-serif
+    font-family: Helvetica, sans-serif;
+    text-shadow: #0c0909 6px 6px;
 }
 
 h2 {
     font-size: 90px;
 }
-
-.o {
-    color: #ffbcbc;
-    text-shadow: #0c0909 6px 6px;
-}
-
-.c {
-    color: #ff91f5;
-    text-shadow: #0c070c 6px 6px;
-}
-
 h1 {
     margin-left: 5%;
     font-size: 60px;
     color: #af1cbc;
-    text-shadow: #0b010c 6px 6px;
 }
 
 img {

@@ -1,45 +1,45 @@
 @font-face {
-    font-family: helvetica;
-    src: url('/helvetica.woff');
-  }
+  font-family: helvetica;
+  src: url('/helvetica.woff');
+}
 
-  body {
-    background-color: rgb(13, 80, 71);
-    font-family: helvetica;
-    overflow-y: hidden;
-  }
+body {
+  background-color: rgb(13, 80, 71);
+  font-family: helvetica;
+  overflow-y: hidden;
+}
 
-  .a {
-    color: white;
-    font-family: Helvetica, serif;
-    font-size: 35px;
-    font-weight: bold;
-    z-index: -1;
-    left: 00px;
-    position: absolute;
-    top: 5%;
-    text-shadow: rgb(18, 25, 3) 4px 4px;
-  }
+.a {
+  color: white;
+  font-family: Helvetica, serif;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: -1;
+  left: 00px;
+  position: absolute;
+  top: 5%;
+  text-shadow: rgb(18, 25, 3) 4px 4px;
+}
 
-  .b {
-    color: transparent;
-    font-family: serif;
-    font-size: 800px;
-    margin-top: -10%;
-  }
+.b {
+  color: transparent;
+  font-family: serif;
+  font-size: 800px;
+  margin-top: -10%;
+}
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-  ::-webkit-scrollbar-track {
-    background: #0D5047;
-  }
+::-webkit-scrollbar-track {
+  background: #0D5047;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: #062621;
-  }
+::-webkit-scrollbar-thumb {
+  background: #062621;
+}
 
-  div#container:hover::-webkit-scrollbar {
-    background: #000;
-  }
+div#container:hover::-webkit-scrollbar {
+  background: #000;
+}

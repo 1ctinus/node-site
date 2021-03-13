@@ -56,7 +56,7 @@ app.get("/", function (req, res) {
   res.render("template.pug", { file: pug.renderFile("views/index.pug"), style: "/css/index.css" })
 })
 
-app.get("/*", function (req, res) {
+app.get("*", function (req, res) {
   // Redirect if no slash at the end
   if (req.url.endsWith("/")) {
     res.redirect(301, (req.url).substring(0, (req.url).length - 1))
