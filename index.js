@@ -14,7 +14,7 @@ app.set("view engine", "pug")
 
 app.get("/neofetch", function (req, res) {
 
-  exec("neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:#2c7f93\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"", (error, stdout, stderr) => {
+  exec("neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:#f43e5c\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"", (error, stdout, stderr) => {
 
     if (error) {
       res.status(500).send(error)
