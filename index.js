@@ -76,5 +76,5 @@ app.get("*", function (req, res) {
 
 app.listen(port, hostname, () => {
 
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Site now running at ${port}`)
 })
