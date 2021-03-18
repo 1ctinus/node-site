@@ -1,0 +1,11 @@
+body
+form(action = "/request", method = "POST")
+  input(name = "question" preview = "An interesting title...")
+  button(type = "submit") Send my greetings
+- var title = JSON.parse(input)
+each val, key in title.questions
+  h3
+    dco= val.time
+    qco= val.question
+  p= val.answer
+p This is #{JSON.parse(input).questions[1].time}

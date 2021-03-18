@@ -4,14 +4,39 @@ const fs = require("fs")                                // file system
 const path = require("path")                           // add static
 const pug = require("pug")                             // pug for... pug
 const { exec } = require("child_process")             // for neofetch
-const favicon = require("serve-favicon")               // favicon
-
+const favicon = require("serve-favicon")   
+var multer = require("multer")
+var upload = multer()            // favicon
+const YAML = require("yaml")
 const port = 8000
 const hostname = "localhost"
 
+app.use(express.json())
+
+// for parsing application/xwww-
+app.use(express.urlencoded({ extended: true }))
+//form-urlencoded
+
+// for parsing multipart/form-data
+app.use(upload.array())
+app.use(express.static("public"))
 app.use(favicon(__dirname + "/static/favicon.ico"))
 app.set("view engine", "pug")
 
+app.get("/questions", function(req, res) {
+  const file = fs.readFileSync("data/test.yaml", "utf8")
+  const parsedFile = JSON.stringify(YAML.parse(file))
+  res.render("questions-temp", {input: parsedFile})
+})
+app.post("/request", function(req, res){
+  req.body.time = new Date()
+  var site = JSON.parse(fs.readFileSync("data/form.json"))
+  site["notes"].push(req.body)
+  site["notes"] 
+  fs.writeFileSync("data/form.json", JSON.stringify(site))
+  console.log(req.body)
+  res.send("recieved your request!")
+})
 app.get("/neofetch", function (req, res) {
 
   exec("neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:#f43e5c\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"", (error, stdout, stderr) => {
