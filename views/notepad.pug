@@ -1,0 +1,16 @@
+doctype html
+h1#title Wednesday Note Taking (S2E1)
+ul
+  li
+    a.active#btnSave(title="Save") 󰆓
+  li
+    a(onclick='document.querySelector("textarea").value = ""' title="Clear") 󰃢
+  li
+    a(onclick='toggleSpellCheck()'  title="Toggle Spellcheck") 󰓆
+  li
+    label.custom-file-input(for='file' title="Select File") 󰩎
+    input(type='file', id="file")
+  li
+    a(onclick='copyToClipboard()'  title="Copy To Clipboard") 󰅌
+textarea#text(rows='30', style='height:1em;')
+script(src='/js/notepad.js')

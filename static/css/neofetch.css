@@ -10,6 +10,7 @@ etc, p {
     font-family: fira, monospace;
     font-size: 22px;
     display: inline-block;
+    vertical-align:top;
 }
 etc {
     white-space: pre;
