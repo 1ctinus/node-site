@@ -85,8 +85,13 @@ app.get("*", function (req, res) {
 
   // Normal response goes here
   else if (fs.existsSync("views/pages" + req.url + ".pug")) {
-    const file = fs.readFileSync(`data${req.url}.yaml`, "utf8")
-    const parsedFile = JSON.stringify(YAML.parse(file))
+    if (fs.existsSync(`data${req.url}.yaml`)) {
+      const file = fs.readFileSync(`data${req.url}.yaml`, "utf8")
+      var parsedFile = JSON.stringify(YAML.parse(file))
+    } else {
+      // eslint-disable-next-line no-redeclare
+      var parsedFile = ""
+    }
     // normal rendering
     res.render("templates/template.pug", { 
       file: pug.renderFile(
