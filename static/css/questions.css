@@ -1,72 +1,68 @@
-dco {
-    color: #E9EC54;
+@font-face {
+    font-family: helvetica;
+    src: url('helvetica.woff')
 }
 
-rco {
-    color: #ff6600;
+::-webkit-scrollbar {
+    width: 15px;
 }
 
-qco {
-    color: #B387FF;
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-green {
-    color: #00cc00;
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
 }
 
-blue {
-    color: #5555ff;
+div#container:hover::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.8);
 }
 
-white {
-    color: #000000;
+body {
+    background-color: rgb(134, 0, 51);
+    animation-duration: 1000s;
+    animation-iteration-count: infinite;
+    animation-name: joe;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: helvetica;
 }
 
-lightred {
-    color: #ff6666;
+.name {
+    display: inline;
+    color: rgb(78, 20, 153);
+    text-shadow: #050014 3px 3px;
 }
 
-strike {
-    text-decoration: line-through;
+.date {
+    color: rgb(108, 203, 184);
+    text-shadow: #131400 3px 3px;
 }
 
-red {
-    color: #ff4444;
+h2 {
+    font-size: 40px;
+    text-shadow: #140800 3px 3px;
+    color: white
 }
 
-yellow {
-    color: #ffff00;
+p {
+    font-size: 39px;
+    text-shadow: rgba(20, 8, 0, 0.5) 3px 3px;
+    color: white;
+    /* margin-top: -2%; */
 }
 
-lightgreen {
-    color: #b3ffb3;
+#tit {
+    color: #EEFF00;
+    text-shadow: #161500 6px 6px;
+    font-size: 40px;
+    transform: scaleY(-1);
+    margin: 0 45% 0 42.5%;
+    cursor: default;
+    transition: 1s;
 }
 
-.alignright {
-    float: right;
-}
-
-.alignleft {
-    float: left;
-}
-
-quotequestion {
-    margin: 20px;
-    padding: 5px;
-    display: block;
-    background-color: #444;
-    border: 1px solid black;
-}
-
-quotedco {
-    color: #e9ec54
-}
-
-quoteqco {
-    color: #b387ff
-}
-
-quoteaco {
-    color: #ffffff;
-    font-weight: normal;
+#tit:hover {
+    transform: scaleY(1);
 }
