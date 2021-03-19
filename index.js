@@ -14,14 +14,16 @@ const rateLimit = require("express-rate-limit")
 
 const limiter = rateLimit({
   windowMs: 12 * 60 * 60 * 1000, // 2 minutes
-  max: 10 // limit each IP to 100 requests per windowMs
+  max: 10, // limit each IP to 100 requests per windowMs
+  keyGenerator: function(req) {
+    return req.headers['cf-connecting-ip'] || req.ip;
+  }
 });
 app.use(express.json({limit: '1kb'}))
 
 // for parsing application/xwww-
 app.use(express.urlencoded({limit: '1kb', extended: true }))
 //form-urlencoded
-app.use(limiter);
 // for parsing multipart/form-data
 app.use(upload.array())
 app.use(express.static("public"))
@@ -33,7 +35,7 @@ app.get("/questions", function(req, res) {
   const parsedFile = JSON.stringify(YAML.parse(file))
   res.render("questions-temp", {input: parsedFile})
 })
-app.post("/request", function(req, res){
+app.post("/request",  limiter, function(req, res){
   req.body.time = new Date()
   var site = JSON.parse(fs.readFileSync("data/form.json"))
   site["notes"].push(req.body)
