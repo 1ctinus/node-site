@@ -74,7 +74,7 @@ app.get("/changeloggit", function (req, res) {
 app.use(express.static(path.join(__dirname, "static"), { redirect: false }))
 
 app.get("/", function (req, res) {
-  res.render("templates/template.pug", { file: pug.renderFile("pages/index.pug"), style: "/css/index.css" })
+  res.render("templates/template.pug", { file: pug.renderFile("views/pages/index.pug"), style: "/css/index.css" })
 })
 // rendering for most files
 app.get("*", function (req, res) {
