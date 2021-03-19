@@ -4,25 +4,24 @@ const fs = require("fs")                                // file system
 const path = require("path")                           // add static
 const pug = require("pug")                             // pug for... pug
 const { exec } = require("child_process")             // for neofetch
-const favicon = require("serve-favicon")   
+const favicon = require("serve-favicon")
 var multer = require("multer")
 var upload = multer()            // favicon
 const YAML = require("yaml")
 const port = 8000
 const hostname = "localhost"
 const rateLimit = require("express-rate-limit")
-
 const limiter = rateLimit({
   windowMs: 12 * 60 * 60 * 1000, // 2 minutes
   max: 10, // limit each IP to 100 requests per windowMs
-  keyGenerator: function(req) {
-    return req.headers['cf-connecting-ip'] || req.ip;
+  keyGenerator: function (req) {
+    return req.headers["cf-connecting-ip"] || req.ip
   }
-});
-app.use(express.json({limit: '1kb'}))
+})
+app.use(express.json({ limit: "1kb" }))
 
 // for parsing application/xwww-
-app.use(express.urlencoded({limit: '1kb', extended: true }))
+app.use(express.urlencoded({ limit: "1kb", extended: true }))
 //form-urlencoded
 // for parsing multipart/form-data
 app.use(upload.array())
@@ -30,16 +29,11 @@ app.use(express.static("public"))
 app.use(favicon(__dirname + "/static/favicon.ico"))
 app.set("view engine", "pug")
 
-app.get("/questions", function(req, res) {
-  const file = fs.readFileSync("data/test.yaml", "utf8")
-  const parsedFile = JSON.stringify(YAML.parse(file))
-  res.render("questions-temp", {input: parsedFile})
-})
-app.post("/request",  limiter, function(req, res){
+app.post("/request", limiter, function (req, res) {
   req.body.time = new Date()
   var site = JSON.parse(fs.readFileSync("data/form.json"))
   site["notes"].push(req.body)
-  site["notes"] 
+  site["notes"]
   fs.writeFileSync("data/form.json", JSON.stringify(site))
   console.log(req.body)
   res.send("recieved your request!")
@@ -57,7 +51,7 @@ app.get("/neofetch", function (req, res) {
       res.status(500).send(stderr)
       return
     }
-    res.render("neofetch-temp.pug", { fetch: stdout })
+    res.render("templates/neofetch", { fetch: stdout })
   })
 })
 app.get("/changeloggit", function (req, res) {
@@ -76,18 +70,13 @@ app.get("/changeloggit", function (req, res) {
     res.render("changelog.pug", { git: stdout })
   })
 })
-// app.get('/testing', function (req, res) {
-//     const compiledFunction = pug.compileFile('views/imp.pug');
-//     res.send(compiledFunction({
-//         name: 'pug'
-//       }))
-// })
-app.use(express.static(path.join(__dirname, "static"), { redirect : false }))
+
+app.use(express.static(path.join(__dirname, "static"), { redirect: false }))
 
 app.get("/", function (req, res) {
-  res.render("template.pug", { file: pug.renderFile("views/index.pug"), style: "/css/index.css" })
+  res.render("templates/template.pug", { file: pug.renderFile("pages/index.pug"), style: "/css/index.css" })
 })
-
+// rendering for most files
 app.get("*", function (req, res) {
   // Redirect if no slash at the end
   if (req.url.endsWith("/")) {
@@ -95,9 +84,17 @@ app.get("*", function (req, res) {
   }
 
   // Normal response goes here
-  else if (fs.existsSync("views" + req.url + ".pug")) {
+  else if (fs.existsSync("views/pages" + req.url + ".pug")) {
+    const file = fs.readFileSync(`data${req.url}.yaml`, "utf8")
+    const parsedFile = JSON.stringify(YAML.parse(file))
     // normal rendering
-    res.render("template.pug", { file: pug.renderFile(`views${req.url}.pug`), style: `css${req.url}.css` })
+    res.render("templates/template.pug", { 
+      file: pug.renderFile(
+        `views/pages${req.url}.pug`, { 
+          yaml: parsedFile,
+        }),
+      style: `css${req.url}.css`,
+    })
   }
   else {
     res.status(200).send(

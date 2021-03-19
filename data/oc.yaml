@@ -1,0 +1,5 @@
+pics: 
+  - foo: "bar"
+    eggs: "spam"
+  - foo: "barsss"
+    eggs: "spamss"

@@ -1,3 +1,5 @@
 node_modules/*
 archive/*
-data/*
+data/form.json
+# testing file
+alphabet.js
