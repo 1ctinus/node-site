@@ -10,13 +10,18 @@ var upload = multer()            // favicon
 const YAML = require("yaml")
 const port = 8000
 const hostname = "localhost"
+const rateLimit = require("express-rate-limit")
 
-app.use(express.json())
+const limiter = rateLimit({
+  windowMs: 12 * 60 * 60 * 1000, // 2 minutes
+  max: 10 // limit each IP to 100 requests per windowMs
+});
+app.use(express.json({limit: '1kb'}))
 
 // for parsing application/xwww-
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({limit: '1kb', extended: true }))
 //form-urlencoded
-
+app.use(limiter);
 // for parsing multipart/form-data
 app.use(upload.array())
 app.use(express.static("public"))
