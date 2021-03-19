@@ -1,4 +1,10 @@
 questions: 
+  - time: "2021-03-18T23:26:45.326Z"
+    question: "<h1>this is pakt's site now</h1>"
+    answer: "no"
+  - time: "2021-03-18T23:17:51.299Z"
+    question: "What time is it"
+    answer: '<span id="time"></span><script>document.getElementById("time").innerHTML = new Date();</script>'
   - time: "2021-03-18T20:45:41.693Z"
     question: "how are you?"
     answer: "fine"

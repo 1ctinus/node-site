@@ -1,5 +1,4 @@
 body
-head
     //- style.
     //-     body {
     //-     outline: 10px solid red;
@@ -24,5 +23,5 @@ each val, key in title.questions
     span.name= val.time
     | 
     span.date= val.question
-  p= val.answer
+  p !{val.answer}
 //- p This is #{JSON.parse(input).questions[1].time}
