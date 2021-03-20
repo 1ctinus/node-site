@@ -56,7 +56,7 @@ app.get("/neofetch", function (req, res) {
     res.render("templates/neofetch", { fetch: stdout })
   })
 })
-app.get("/changeloggit", function (req, res) {
+app.get("/changelog", function (req, res) {
 
   exec("git log | grep  --color=never -e \"    \" -e Date", (error, stdout, stderr) => {
 
@@ -69,7 +69,7 @@ app.get("/changeloggit", function (req, res) {
       res.status(500).send(stderr)
       return
     }
-    res.render("changelog.pug", { git: stdout })
+    res.render("templates/changelog", { git: stdout })
   })
 })
 

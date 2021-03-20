@@ -7,6 +7,7 @@
   font-family: helvetica;
   src: url('/helvetica.woff');
 }
+
 body {
   background-color: #440044;
   font-family: helvetica;
@@ -64,4 +65,15 @@ etc {
   font-size: 20px;
   background-color: 20px;
   margin: 50px;
+}
+
+etc {
+  white-space: pre;
+  margin-left: 50px;
+}
+
+.program {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 2%;
+  padding: 50px;
 }
