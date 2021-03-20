@@ -4,27 +4,7 @@ head
 h2
   span(style="color: #ffbcbc;") O
   span(style="color: #ff91f5;") C
-- var title = JSON.parse(yaml)
-each val, key in title.pics
-  h2
-    span.name= val.foo
-  p !{val.eggs}
-h1 2/15/2021
-img(src='/pics/blend.png')
-h1 10/09/2020
-img(src='/pics/quote.png')
-h1 10/06/2020
-img(src='/pics/web.png')
-h1 09/17/2020
-img(src='/pics/no2.png')
-h1 08/10/2020
-img(src='/pics/47.png')
-h1 05/23/2020
-img(src='/pics/uk.PNG')
-h1 05/10/2019
-img(src='/pics/fg.png')
-h1 10/28/2017
-img(src='/pics/HRE.png')
-h1 09/24/2017
-img(src='/pics/balkan.png')
-p !{yaml}
+- var json = JSON.parse(yaml)
+each val, key in json
+  h1= val.date
+  img(src=val.img) 

@@ -1,5 +1,18 @@
-pics: 
-  - foo: "bar"
-    eggs: "spam"
-  - foo: "barsss"
-    eggs: "spamss"
+- date: 2/15/2021
+  img: "/pics/blend.png"
+- date: 10/09/2020
+  img: "/pics/quote.png"
+- date: 10/06/2020
+  img: "/pics/web.png"
+- date: 09/17/2020
+  img: "/pics/no2.png"
+- date: 08/10/2020
+  img: "/pics/47.png"
+- date: 05/23/2020
+  img: "/pics/uk.PNG"
+- date: 05/10/2019
+  img: "/pics/fg.png"
+- date: 10/28/2017
+  img: "/pics/HRE.png"
+- date: 09/24/2017
+  img: "/pics/balkan.png"

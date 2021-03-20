@@ -4,6 +4,10 @@ head
 h2
   span.a &apos;
   span.b Shots
+- var json = JSON.parse(yaml)
+each val, key in json
+  h1= val.date
+  img(src=val.img) 
 h1 2/13/2021
 img(src='/pics/openbox.png')
 h1 08/31/2020

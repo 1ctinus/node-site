@@ -1,36 +1,25 @@
 head
   title software i use
-  meta(charset='UTF-8')
 mixin flex-item(caption, url)
   .img__wrap
     img.img__img(src=url)
     .img__description_layer
       p.img__description #{caption}
-mixin papirus-flex-item(caption, icon=caption, site)
+mixin papirus-flex-item(caption=icon, icon, site)
   .img__wrap
     a(href=site)
-      img.img__img(src='https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/'+icon+'.svg', width='128px', height='128px')
+      img.img__img(src=`https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/${icon}.svg`, width='128px', height='128px')
       .img__description_layer
         p.img__description #{caption}
 body
   h1 Software I am Using:
   .flex-container
-    -
-      var data = [
-        ["Blender", "blender", "https://www.blender.org/"],
-        ["OSS Code/VSCode", "code-oss", "https://code.visualstudio.com/"],
-        ["Firefox", "firefox", "https://www.mozilla.org/firefox/"],
-        ["shotcut", "shotcut", "https://shotcut.org/"],
-        ["Vim", "vim", "https://www.vim.org/"],
-        ["Emacs", "emacs", "https://www.gnu.org/software/emacs/"],
-        ["GIMP", "gimp", "https://www.gimp.org/"],
-        ["Flameshot", "flameshot", "https://flameshot.org/"],
-        ["Alacritty", "Alacritty", "https://github.com/alacritty/alacritty"],
-        ["Xmonad / Xmobar", "applications-haskell", "https://xmonad.org/"],
-        ["Inkscape", "inkscape", "https://inkscape.org/"]
-        ]
-    each object in data
-      +papirus-flex-item(object[0], object[1], object[2])
+    - var json = JSON.parse(yaml)
+    each val, key in json
+      - if(val.caption)
+        +papirus-flex-item(val.caption, val.icon, val.site)
+      - else
+        +papirus-flex-item(val.icon, val.icon, val.site)
   footer
     a(href='https://github.com/PapirusDevelopmentTeam/papirus-icon-theme') 
       | Special thanks to papirus for the wonderful icons. Check them out!

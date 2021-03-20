@@ -13,69 +13,10 @@ head
   meta(charset='UTF-8')
   title haikus
 h1#tit haikus
-+haiku("The Weather", "03-10-2021", "can somebody please", "just describe what's going on", "about this weather")
-+haiku("Water", "02-06-2021", "nothing just quite tastes","as refreshing and so good",  "as just plain water")
-+haiku("Day", "02-04-2021", "Sure the last was bad", "Just remember that today", " Is a brand new day!")
-+haiku("node", "02-05-2021", "programming is hard", "servers are even harder", "pain and misery")
-+haiku("meta", "02-03-2021", "are these real haikus?", "ain&apos;t haikus about nature?", "these all kinda suck")
-+haiku("&apos;sed&apos;", "02-03-2021", "hope this won&apos;t be lost","cause i suck at programming", "f for this haiku")
-h2
-  span.date 02-03-2021
-  | ~
-  span.name o u t s i d e
-p
-  | The cool breeze is chill
-  br
-  | I step outside and feel the snow
-  br
-  | Hi february
-h2
-  span.date 02-02-2021
-  | ~
-  span.name life
-p
-  | life essentially
-  br
-  | boils down to just one song
-  br
-  | it&apos;s the spanish flea
-h2
-  span.date 02-02-2021
-  | ~
-  span.name not very interesting
-p
-  | test test test test test
-  br
-  | beep boop beep boop beep beep boop
-  br
-  | automated task
-h2
-  span.date 11-13-2020
-  | ~
-  span.name news
-p
-  | what if we all could
-  br
-  | just ignore all of the news
-  br
-  | life would be more good
-h2
-  span.date 11-08-2020
-  | ~
-  span.name cells
-p
-  | mitochondria
-  br
-  | the powerhouse of the cell
-  br
-  | needed that for bills
-h2
-  span.date 11-07-2020
-  | ~
-  span.name the first one
-p
-  | this is the first one
-  br
-  | soon more text here will come soon
-  br
-  | hope i&apos;m not lazy
+- var json = JSON.parse(yaml)
+each val, key in json
+  h2
+    span.date= val.date
+    | ~
+    span.name= val.title
+  p=val.haiku

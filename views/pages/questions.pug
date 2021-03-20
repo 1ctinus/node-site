@@ -2,10 +2,9 @@ form(action = "/request", method = "POST")
   input(name = "question" preview = "An interesting title...")
   button(type = "submit") Ask
 - var json = JSON.parse(yaml)
-each val, key in json.questions
+each val, key in json
   h2
     span.name= val.time
     | 
     span.date= val.question
   p !{val.answer}
-//- p This is #{JSON.parse(input).questions[1].time}
