@@ -107,8 +107,15 @@ function search() {
     if (coin > 0.5) {
       a("heads")
     } else (a("tails"))
-    break; case "egg": case "eggs":
-    link.href = "search/egg.svg"
+    break; case "egg": case "eggs": {
+    document.body.innerHTML = ""
+    document.removeChild(document.firstChild)
+    var egg = document.createElement("img")
+    egg.setAttribute("id", "egg")
+    egg.setAttribute("src", "https://svgsilh.com/svg/2181491.svg")
+    egg.setAttribute("style", "filter: invert(1)sepia(1);")
+    document.body.prepend(egg)
+  }
     break; case "delete":
     while (document.firstChild) {
       document.removeChild(document.firstChild)
