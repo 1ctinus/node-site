@@ -2,7 +2,7 @@
   "name": "node",
   "version": "1.0.0",
   "description": "thing",
-  "main": "index.js",
+  "main": "./server/index.js",
   "scripts": {
     "test": "ntest"
   },
