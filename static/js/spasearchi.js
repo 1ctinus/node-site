@@ -2,27 +2,39 @@ function a(input) {
   document.getElementById("output").innerHTML = input
 }
 function search() {
+  var qna = {
+    "foo": "bar",
+    "when": "apporximetly" + new Date(),
+    "ping": "pong",
+    "you suck": "sorry i guess",
+    "what": "ask some questions, search for eggs, and have some shortcuts too",
+    "how": "VSCode, Arch Linux, VPS, Caddy, Node...",
+    "why": "why not though?",
+    "who won the election": "Kanye East",
+    "are you bill wurtz": "no.",
+    "who are you": "Linus Torvalds,",
+    "who is 1ctinus": "Tom Brady,",
+    "who is ictinus": "John Adams,"
+  }
   // var op = document.getElementById("output")
   var link = window.location
   var bg = document.body.style
   var delyeet = document.getElementById("css")
-  var delyeet2 = document.getElementById("Dave")
   var xy = ["X", "Y"]
   var xyp = parseInt(Math.random() * xy.length)
   var skew = 20 * Math.random() - 10
   var date = new Date()
-  var x = document.getElementById("Dave").value
-  var punctuationless = x.replace(/[.,/#!?$'%^&*;:{}=\-_`~()]/g, "")
-  var finalString = punctuationless.replace(/\s{2,}/g, " ")
+  var finalString = ((document.getElementById("input").value).replace(/[.,/#!?$'%^&*;:{}=\-_`~()]/g, "")) //.replace(/\s{2,}/g, " ")
   var res = finalString.split(" ")
+  if (qna[finalString]) {
+    a(qna[finalString])
+  }
   switch (finalString) {
   // let's start out with the hrefs...
   case "haiku": case "haikus":
     link.href = "haikus.html"
     break; case "changelog":
     link.href = "changelog.html"
-    break; case "json": case "videos": case "about":
-    link.href = "coming-soon.html"
     break; case "self": case "doxx":
     link.href = "self.html"
     break; case "pics":
@@ -55,7 +67,7 @@ function search() {
     break; case "groove": case "groovy":
     link.href = "https://en.wikipedia.org/wiki/Pelican"
     break; case "self destruct":
-    delyeet2.remove()
+    document.getElementById("input").remove()
     break; case "dark":
     bg.backgroundColor = "#111"
     break; case "amoled": case "black":
@@ -123,34 +135,16 @@ function search() {
     //q&a
     break; case "are you bill wurtz": case "wurtz soon":
     link.href = "https://www.youtube.com/watch?v=qWwb8S02f_c"
-    break; case "who won the election":
-    a("i think the old guy won")
-    break; case "what":
-    a("ask some questions, search for eggs, and have some shortcuts too")
-    break; case "you suck":
-    a(":(")
-    break; case "ping":
-    a("pong")
     break; case "what is your gender": case "what is your sex": case "are you male or female":
     a("male")
-    break; case "who are you": case "who":
-    a("a program made and run by 1ctinus.")
     break; case "where": case "where am i": case "what is your favorite website": case "what is the best website":
     a("https://1ctinus.me")
-    break; case "when":
-    a("now, or you could wait 2pm est on monday for the wotw")
     break; case "who made you":
     a("either 1ctinus or George Washington. But it's up to you")
-    break; case "how":
-    a("github and vsc, and shotcut too")
-    break; case "why":
-    a("because why not")
     break; case "what programming languages do you know": case "what programming languages did you learn":
     a("javascript, but hopefully php and json soon")
     break; case "what time is it": case "what is the time": case "whats the time": case "time":
     a(date.getHours() + ":" + date.getMinutes())
-    break; case "who is 1ctinus": case "who is ictinus":
-    a("a dude just trying to get by")
     break; case "how are you doing": case "how you doing": case "how are you":
     a("maybe alright, maybe not. but most of the times, ok.")
   }

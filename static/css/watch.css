@@ -1,0 +1,46 @@
+@font-face {
+    font-family: helvetica;
+    src: url('/helvetica.woff');
+  }
+@font-face {
+    font-family: icon;
+    src: url(https://raw.githubusercontent.com/Templarian/MaterialDesign-Font/master/MaterialDesignIconsDesktop.ttf) format('truetype')
+}
+button {
+    background-color: #4CAF50; /* Green */
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 3px;
+    border: none;
+    color: white;
+    padding: 25px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    position: relative; left: -50%;
+    transition: 0.1s;
+  }
+button:hover {
+    background-color: #2e6e30;
+}
+* {
+    font-family: helvetica, icon, sans-serif;
+}
+#demo {
+position: absolute;
+top: 50%;
+left: 50%;
+/* bring your own prefixes */
+transform: translate(-50%, -50%);
+font-family: 'Source Code Pro';
+font-size: 70px;
+}
+#button-container {
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    justify-content: center;
+}
+h1 {
+    font-style: italic;
+    text-align: center;
+}
