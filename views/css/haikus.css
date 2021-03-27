@@ -1,6 +1,6 @@
 @font-face {
   font-family: helvetica;
-  src: url('helvetica.woff')
+  src: url('/helvetica.woff')
 }
 
 @keyframes joe {
