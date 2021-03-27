@@ -62,7 +62,7 @@ if (window.localStorage) {
 // document.querySelector("textarea").style.backgroundSize = "24px 24px, 24px 24px"
 function toggleSpellCheck() {
   const value = document.getElementById("text").getAttribute("spellcheck")
-  document.getElementById("text").setAttribute("spellcheck", value == false ? "true" : "false")
+  document.getElementById("text").setAttribute("spellcheck", value == "false" ? "true" : "false")
 }
 const inputElement = document.getElementById("file")
 inputElement.addEventListener("change", handleFiles, false)

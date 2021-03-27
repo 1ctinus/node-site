@@ -22,11 +22,13 @@
   },
   "homepage": "https://github.com/1ctinus/node-site#readme",
   "dependencies": {
+    "clean-css": "^5.1.2",
     "express": "^4.17.1",
     "express-rate-limit": "^5.2.6",
     "multer": "^1.4.2",
     "pug": "^3.0.0",
     "serve-favicon": "^2.5.0",
+    "terser": "^5.6.1",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
