@@ -1,4 +1,3 @@
-const pug = require("pug")
 const Router = require("express").Router()                      // express                               // express                        // pug for... pug
 const { exec } = require("child_process")             // for neofetc
 const rateLimit = require("express-rate-limit")
@@ -52,8 +51,5 @@ Router.get("/changelog", function (req, res) {
     }
     res.render("templates/changelog", { git: stdout })
   })
-})
-Router.get("/", function (req, res) {
-  res.render("templates/template.pug", { file: pug.renderFile("views/pages/index.pug"), style: "/css/index.css" })
 })
 module.exports = Router

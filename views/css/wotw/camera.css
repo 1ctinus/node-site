@@ -1,0 +1,37 @@
+#flex {
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    height: 720px;
+    float:right
+}
+img {
+    height: 240px;
+    background: #223;
+}
+img:hover {
+    outline: 3px solid red;
+    z-index: 2;
+   }
+video {
+    height: 720px;
+    min-width: 960px;
+}
+video {
+    background: #223;
+}
+button {
+    background-color: #223;
+    font-size: 30px;
+    color: #dde;
+}
+body {
+    background-color: #334;
+}
+* {
+    color: #dde;
+    text-shadow: #222 0.2em 0.2em;
+}
+#container {
+    display:flex
+}
