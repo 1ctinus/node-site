@@ -6,6 +6,10 @@ var useragent = require("useragent")                 // Anti IE Jazz
 const { minify } = require("terser")                // JS Compression
 var CleanCSS = require("clean-css")                // CSS Compression
 var redirectdata = YAML.parse(fs.readFileSync("data/redirects.yaml", "utf8"))
+function title(url){
+  const titleFile = YAML.parse(fs.readFileSync( "data/titles.yaml", "utf8"))
+  return (titleFile[url]) ? titleFile[url]:url + " - 1ctinus.me"
+}
 Router.get("*", function (req, res) {
   // IE checking
   let agent = useragent.lookup(req.headers["user-agent"])
@@ -16,7 +20,7 @@ Router.get("*", function (req, res) {
     // Redirect if no slash at the end
     if (req.url.endsWith("/")) {
       if (req.url == "/") {
-        res.render("templates/template.pug", { file: pug.renderFile("views/pages/index.pug"), style: "/css/index.css" })
+        res.render("templates/template.pug", { file: pug.renderFile("views/pages/index.pug"), style: "/css/index.css" , title: "1ctinus' very cool webzone on the internets"})
       }
       else {
         res.redirect(301, (req.url).substring(0, (req.url).length - 1))
@@ -61,6 +65,7 @@ Router.get("*", function (req, res) {
             yaml: parsedFile,
           }),
         style: `/css${req.url}.css`,
+        title: title(req.url.substring(1))
       })
     }
     else {
