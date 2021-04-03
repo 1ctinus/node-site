@@ -5,7 +5,12 @@ mixin menutext(title, href, color, shadowColor)
   p#svgb 1ctinus.me
   p#svgc 1ctinus.me
 h1#welc.welc
-script(src='js/loop.js')
+//script(src='js/loop.js')
+- var arr = "welcome\xa0to\xa0the\xa0bestest\xa0webzone\xa0on\xa0the\xa0internets!".split("")
+- var n = 1;
+h1#welc.welc
+  while n < 47
+    span(style="animation-delay:-"+n++ +"00ms") #{arr[n]}
 p#paragraph.paragraph
   | Here is my website that looks like it came from 1998, now running on
   | Node.js and Caddy.
