@@ -1,6 +1,6 @@
 {
-  "name": "node",
-  "version": "1.0.0",
+  "name": "node-site",
+  "version": "2",
   "description": "thing",
   "main": "./server/index.js",
   "scripts": {

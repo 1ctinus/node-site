@@ -1,7 +1,7 @@
-/haiku: "haikus"
-/index.html: "/"
-/index.php: "/"
-/qna: "questions"
-/watch: "wotw/watch"
-/notepad: "wotw/notepad"
-/camera: "wotw/camera"
+/haiku: haikus
+/index.html: /
+/index.php: /
+/qna: questions
+/watch: wotw/watch
+/notepad: wotw/notepad
+/camera: wotw/camera

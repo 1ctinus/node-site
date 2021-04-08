@@ -1,45 +1,51 @@
-- title: "Spring"
-  date: "04-01-2021"
+- title: Spring v2
+  date: 04-02-2021
+  haiku: | 
+    Wait a minute why
+    does the sun set past seven
+    It's just like summer
+- title: Spring
+  date: 04-01-2021
   haiku: | 
     Congrats, it's now spring!
     Time for you to pretend that
     It's just like summer
-- title: "The Weather"
-  date: "03-10-2021"
+- title: The Weather
+  date: 03-10-2021
   haiku: | 
     can somebody please
     just describe what's going on
     about this weather
-- title: "Water"
-  date: "02-06-2021"
+- title: Water
+  date: 02-06-2021
   haiku: | 
     nothing just quite tastes
     as refreshing and so good
     as just plain water
-- title: "Day"
-  date: "02-04-2021"
+- title: Day
+  date: 02-04-2021
   haiku: | 
     Sure the last was bad
     Just remember that today
     Is a brand new day!
-- title: "node"
-  date: "02-05-2021"
+- title: node
+  date: 02-05-2021
   haiku: | 
     programming is hard
     servers are even harder
     pain and misery
-- title: "meta"
-  date: "02-03-2021"
+- title: meta
+  date: 02-03-2021
   haiku: | 
-    "are these real haikus?
+    are these real haikus?
     ain&apos;t haikus about nature?
     these all kinda suck
-- title: "&apos;sed&apos;"
-  date: "02-03-2021"
+- title: &apos;sed&apos;
+  date: 02-03-2021
   haiku: | 
-    "hope this won&apos;t be lost"
-    "cause i suck at programming"
-    "f for this haiku
+    hope this won&apos;t be lost
+    cause i suck at programming
+    f for this haiku
 - date: 02-03-2021
   title: o u t s i d e
   haiku: |

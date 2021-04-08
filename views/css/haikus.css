@@ -3,20 +3,6 @@
   src: url('/helvetica.woff')
 }
 
-@keyframes joe {
-  0% {
-    background-color: rgb(134, 0, 51);
-  }
-  33.3% {
-    background-color: rgb(150, 6, 42);
-  }
-  66.6% {
-    background-color: rgb(150, 6, 119);
-  }
-  100% {
-    background-color: rgb(134, 0, 51);
-  }
-}
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -35,10 +21,7 @@ div#container:hover::-webkit-scrollbar {
 }
 
 body {
-  transition-timing-function: ease-in-out;
-  animation-duration: 1000s;
-  animation-iteration-count: infinite;
-  animation-name: joe;
+  background-color: rgb(37, 14, 23);
   font-size: 60px;
   font-weight: bold;
   text-align: center;
@@ -48,23 +31,23 @@ body {
 .name {
   display: inline;
   color: rgb(78, 20, 153);
-  text-shadow: #050014 6px 6px;
+  text-shadow: rgba(20, 8, 0, 0.5) 7px 7px;
 }
 
 .date {
   color: rgb(108, 203, 184);
-  text-shadow: #131400 6px 6px;
+  text-shadow: rgba(20, 8, 0, 0.5) 7px 7px;
 }
 
 h2 {
-  font-size: 75px;
+  font-size: 65px;
   text-align: center;
   text-shadow: #140800 5px 5px;
   color: white
 }
 
 p {
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
   text-shadow: rgba(20, 8, 0, 0.5) 7px 7px;
   color: white;
