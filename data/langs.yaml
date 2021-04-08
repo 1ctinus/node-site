@@ -1,0 +1,50 @@
+- language: go
+  rating: 3.5
+  reason: Go is a neat language, but has many things I don't like about it, the major thing is document
+  pros: [fast, cute gopher]
+  cons: [error handling, i struggle with the docs (i dont think its bad)]
+- language: rust
+  rating: 1.5
+  reason: some neat features, big compiler, obnoxius fans. I can respect it but i'm learning other langs. Honesly, just not a language im interested in at the moment. It would be nice to learn it in the future
+  pros: [no null]
+  cons: [annoying fanbase, large compiler (who cares though?)]
+- language: c
+  rating: 3.5
+  reason: I have a weird relashionship with C. Why do I want to learn C? Because it's blazing fast and good for command utilities. Why is it low? Because C is hard, I mainly know Javascript, and I don't know how to do memory safety. At all.
+  pros: [the embodiment of speed, get to learn how computers work more]
+  cons: [no modern feautures, memory safety]
+- language: C++
+  source: cpp
+  rating: 2
+  reason: C++ is like C, but with advanced feauters I would not be able to understand, and messier syntax, and slightly slower. I will just stick to C for now.
+  cons: [ugly syntax, memory safety, confusing and bad and Go exists]
+- language: typescript
+  rating: 4
+  reason: Javascript bad, and all the cool kids use typescript. For real, the typing system in Javascript is really dumb, and i have heard it is good for large projects.
+  pros: [type safety]
+  cons: [awkward compiler, since nothing in my current project is compiled]
+- language: powershell
+  rating: 1
+  reason: I dont like windows and it's syntax is weird
+  pros: [good for windows]
+  cons: [windows isnt my daily driver anymore]
+- language: haskell
+  rating: 2
+  reason: Haskell does seem like a very interesting idea, functional programming doesn't really make sense. I don't think i'll really use it for big projects, but I think it could help expand my knowledge in computer science.
+  pros: [funcitonal programming]
+  cons: [funcitonal programming]
+- language: java
+  rating: 2.5
+  reason: I feel like I need to learn java for some reason, but it's just not my type right noe. why? mainly, boilerplate. secondly, I dont know how to make java programs into commands. Third, I suck at OOP.
+  pros: [legacy code pays!, able to make large projects with it]
+  cons: [I don't know OOP, you have to type 2 commands]
+- language: python 
+  rating: 2.5
+  reason: I should like python because im a data nerd, but i dont. one, its syntax isnt C like enough, and programmers hate anything that is different. Second, it's slow, and because my computer is slow, im a sucker for good speed.
+  pros: [noob friendly, good typing system, good libraries]
+  cons: [whitespace syntax, the slow zone]
+- language: php
+  rating: 1
+  reason: people say php bad, and when looking at it's syntax, yeah, it's not hot. r/lolphp really shows the awfulness of a lot of its feautures.
+  pros: [legacy code pays!, die and explode are kinda funny]
+  cons: [terrible design, "django, node and actix exist"]

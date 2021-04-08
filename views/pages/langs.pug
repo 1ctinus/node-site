@@ -1,0 +1,30 @@
+mixin item(e)
+  .lang
+    .container
+      if !e.source
+        img.main(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.language+'.svg', width='128', height='128')
+        img.shadow(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.language+'.svg', width='128', height='128')
+      else 
+        img.main(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.source+'.svg', width='128', height='128')
+        img.shadow(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.source+'.svg', width='128', height='128')
+    .top-right
+      h3.label
+        | #{e.language}
+      .star-ratings-sprite
+        span.star-ratings-sprite-rating(style='width:'+e.rating * 2 + '0%')
+    p.text #{e.reason}
+    ul.pros 
+      div Pros:
+      if e.pros
+        each val, _ in e.pros 
+          li #{val}
+    ul.cons 
+      div Cons:
+      if e.cons
+        each val, _ in e.cons 
+          li #{val}
+h1 Rating How Much I Want to Learn Languages
+.wrapper
+  - var json = JSON.parse(yaml)
+  each val, key in json
+    +item(val)
