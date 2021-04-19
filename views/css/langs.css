@@ -6,7 +6,7 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    filter: brightness(60%) saturate(2);
+    filter: brightness(50%) saturate(2);
 }
 
 .main {

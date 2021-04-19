@@ -3,3 +3,4 @@ archive/*
 data/form.json
 data/questions.yaml
 TODO
+.vscode/*
