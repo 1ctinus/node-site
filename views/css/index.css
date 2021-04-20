@@ -166,7 +166,7 @@ margin-left: 20px;
 transition: 0.3s;
 font-size: clamp(45px, 6vw, 86px);
 }
-@media only screen and (max-width: 800px) {
+@media (orientation: portrait) {
   h2  /*,*article,#Dave, #more, .preview*/ {
     display: none;
   }
