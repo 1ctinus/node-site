@@ -66,6 +66,9 @@ Router.get("*", function (req, res) {
         res.send(new CleanCSS().minify(code).styles)
       }
     }
+    else if (fs.existsSync(`views/pages/archive${req.url}.pug`)) {
+      res.redirect(301,  "archive"+req.url)
+    }
     // Now we get to Pug, main page
     else if (fs.existsSync(`views/pages${req.url}.pug`)) {
 

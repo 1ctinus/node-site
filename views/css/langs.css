@@ -14,7 +14,7 @@
     position: relative;
 }
 
-.lang {
+section {
     display: grid;
     grid-template-rows: 130px auto 150px;
     width: 300px;
@@ -24,12 +24,14 @@
     border-radius: 40px;
     margin: 20px;
     border-bottom: 10px solid rgba(0, 0, 0, 0.05);
+    position: relative;
 }
 
-.label {
+h2{
     text-align: center;
     vertical-align: middle;
-    font-size: 30px
+    font-size: 30px;
+    text-transform: capitalize
 }
 
 .star-ratings-sprite {
@@ -57,7 +59,7 @@ p {
     grid-column-end: span 2;
 }
 
-.text::before {
+p::before {
     content: "Explination: ";
     font-weight: bold;
 }
@@ -68,14 +70,14 @@ p {
     justify-content: center;
 }
 
-h3 {
-    text-transform: capitalize;
-}
-
 h1 {
     text-align: center;
 }
 
 ul {
     margin-left: -20px
+}
+h3 {
+    margin-top: -0.1em;
+    margin-bottom: -0.1em
 }
