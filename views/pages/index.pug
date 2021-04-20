@@ -2,9 +2,9 @@ mixin menutext(title, href, color, shadowColor)
   a(style='text-shadow: '+shadowColor+' 6px 6px;color: '+color, href=href) #{title} 
 section
   h1
-    p#svga 1ctinus.me
-    p#svgb 1ctinus.me
-    p#svgc 1ctinus.me
+    span#svga 1ctinus.me
+    span#svgb 1ctinus.me
+    span#svgc 1ctinus.me
   h2
     each val, index in "welcome\xa0to\xa0the\xa0bestest\xa0webzone\xa0on\xa0the\xa0internets!".split("")
       span(style="animation-delay:-"+index +"00ms") #{val}

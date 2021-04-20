@@ -1,9 +1,9 @@
 @keyframes wave {
   0% {
-    transform: rotate(-5deg) translateY(50px)
+    transform: rotate(-5deg) translateY(0px)
   }
   100% {
-    transform: rotate(5deg) translateY(-50px);
+    transform: rotate(5deg) translateY(100px);
   }
 }
 @keyframes example {
@@ -32,18 +32,18 @@ h1 {
 #svga {
   color: #00f;
   left: 1%;
-  margin-top: -1%;
+  margin-top: -0.5%;
 }
 
 #svgb {
   color: #0f0;
   left: 0%;
-  margin-top: -0.5%
+  margin-top: -0%
 }
 #svgc {
   color: #f00;
   left: -1%;
-  margin-top: 0%
+  margin-top: 0.5%
 }
 
 .href {
@@ -100,7 +100,7 @@ h2 {
 
 article {
   font-size:clamp(16px, 4vw, 29px);
-  max-width: 600px
+  max-width: 700px
 }
 p {
   text-indent: 1.1em;
@@ -164,13 +164,13 @@ nav {
 display:inline-block;
 margin-left: 20px;
 transition: 0.3s;
-font-size: 72px;
+font-size: clamp(45px, 6vw, 86px);
 }
-/* @media only screen and (max-width: 800px) {
-  article, h2, #Dave, #more, .preview {
+@media only screen and (max-width: 800px) {
+  h2  /*,*article,#Dave, #more, .preview*/ {
     display: none;
   }
-} */
+} 
 nav >a:active {
   color: white !important;
 }
