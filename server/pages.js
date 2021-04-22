@@ -17,10 +17,10 @@ Router.use(function (req, res, next) {
     next()
   }
 })
-Router.use(function(req, res, next){
+Router.use(function (req, res, next) {
   if (fs.existsSync(`views/pages/archive${req.url}.pug`)) {
     res.redirect(301, "archive" + req.url)
-  } else{
+  } else {
     next()
   }
 })
@@ -50,12 +50,12 @@ Router.get("/", function (req, res) {
 })
 Router.get("/oc|/shots", function (req, res) {
   let files = fs.readdirSync(`../files${req.url}`).reverse()
-  res.send(200, defaultRender(res, {
+  res.send(defaultRender(res, {
     "file": `views/templates${req.url}.pug`,
     "input": files, style: `/css${req.url}.css`
   }))
 })
-Router.use( function (req, res) {
+Router.use(function (req, res) {
   // checking redirect YAML
   // Now we get to Pug, main page
   if (fs.existsSync(`views/pages${req.url}.pug`)) {
