@@ -16,12 +16,14 @@ Router.get("*", function (req, res) {
     object = {
       "file":pug.renderFile("views/pages/index.pug"),
       "style": "data:text/css,h1{font-size: 200px;}",
-      "yaml": undefined, "title": "1ctinus.me"
+      "yaml": undefined, "title": "1ctinus.me",
+      "input": undefined
     }){
     res.render("templates/template.pug", {
       file: pug.renderFile(
         object.file, {
           yaml: object.yaml,
+          input: object.input
         }),
       style: object.style,
       title: object.title
@@ -49,6 +51,11 @@ Router.get("*", function (req, res) {
     else if (redirectdata[req.url]) {
       res.redirect(301, redirectdata[req.url])
     }
+    else if(req.url == "/shots"|| req.url == "/oc"){
+      let files = fs.readdirSync(`../files${req.url}`).reverse()
+      res.send(200,      defaultRender({"file": `views/templates${req.url}.pug`,
+        "input": files, style: `/css${req.url}.css`}))
+    }
     else if (fs.existsSync("views" + req.url)) {
       // Sends compressed Javascript
       let code = fs.readFileSync(`views${req.url}`, "utf8")
@@ -60,6 +67,7 @@ Router.get("*", function (req, res) {
           })
           .catch(err => console.log(err))
       }
+
       // sends compressed CSS, even though i should probably learn SCSS some day.
       else if ((req.url).endsWith(".css")) {
         res.setHeader("content-type", "text/css")
