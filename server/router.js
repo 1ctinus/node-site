@@ -10,10 +10,20 @@ const IE = function(req, res, next) {
   // No fun for you if you use IE. 
   if (agent.family == "IE") {
     res.send("IE is not supported on this site, is outdated, and sucks. Please use Chromium/Firefox based browsers. Thanks.")
-  } 
-  next()
+  } else {
+    next()
+  }
 }
+const removeSlash = function(req, res, next){
+  if(req.url.match(/\/.*\/$/)){
+    res.redirect(301, (req.url).substring(0, (req.url).length - 1))
+  } else {
+    next()
+  }
+}
+Router.use(removeSlash)
 Router.use(IE)
+
 const limiter = rateLimit({
   windowMs: 12 * 60 * 60 * 1000, // 2 minutes
   max: 10, // limit each IP to 100 requests per windowMs
@@ -73,8 +83,5 @@ Router.get("/js/*.js", function(req, res){
   minify(code)
     .then(({code}) => res.send(code))
     .catch(console.error)
-})
-Router.get("/.*/", function (req, res){
-  res.redirect(301, (req.url).substring(0, (req.url).length - 1))
 })
 module.exports = Router
