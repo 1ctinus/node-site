@@ -3,7 +3,7 @@ body {
     font-family: Helvetica, sans-serif
 }
 
-h2 {
+h1{
     font-size: 90px;
 }
 
@@ -17,7 +17,7 @@ h2 {
     text-shadow: #0c070c 6px 6px;
 }
 
-h1 {
+h2{
     margin-left: 5%;
     font-size: 60px;
     color: #9b8641;

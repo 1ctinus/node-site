@@ -21,16 +21,13 @@ div#container:hover::-webkit-scrollbar {
 
 body {
     background-color: rgb(134, 0, 51);
-    animation-duration: 1000s;
-    animation-iteration-count: infinite;
-    animation-name: joe;
     font-size: 38px;
     font-weight: bold;
     font-family: helvetica;
 }
 
 .name {
-    display: inline;
+    /* display: inline; */
     color: rgb(78, 20, 153);
     text-shadow: #050014 3px 3px;
 }
@@ -41,28 +38,30 @@ body {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 25px;
     text-shadow: #140800 3px 3px;
-    color: white
+    color: white;
 }
 
 p {
-    font-size: 39px;
+    font-size: 20px;
     text-shadow: rgba(20, 8, 0, 0.5) 3px 3px;
     color: white;
-    /* margin-top: -2%; */
-}
-
-#tit {
-    color: #EEFF00;
-    text-shadow: #161500 6px 6px;
-    font-size: 40px;
-    transform: scaleY(-1);
-    margin: 0 45% 0 42.5%;
-    cursor: default;
-    transition: 1s;
+    margin-left: 2vw
 }
 
 #tit:hover {
     transform: scaleY(1);
+}
+
+@media only screen and (max-width: 600px) {
+    .date {
+        display: none
+    }
+}
+
+article {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0
 }

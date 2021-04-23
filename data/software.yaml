@@ -19,8 +19,12 @@
   site: https://flameshot.org/
 - icon: Alacritty
   site: https://github.com/alacritty/alacritty
-- caption: Xmonad / Xmobar
-  icon: applications-haskell
-  site: https://xmonad.org/
+# - caption: Xmonad / Xmobar
+#   icon: applications-haskell
+#   site: https://xmonad.org/
 - icon: inkscape
   site: https://inkscape.org/
+
+- caption: XFCE 
+  icon: desktop-environment-xfce
+  site: https://xfce.org

@@ -1,6 +1,5 @@
 const express = require("express")                     // express
-const app = express()                                   // express
-const path = require("path")                           // add static                             // pug for... pug
+const app = express()                                   // express                          // pug for... pug
 const favicon = require("serve-favicon")
 var multer = require("multer")
 var upload = multer()            // favicon
@@ -19,7 +18,7 @@ app.use(favicon(__dirname + "/../static/favicon.ico"))
 app.set("view engine", "pug")
 
 app.use(require("./router.js"))
-app.use(express.static(path.join(__dirname, "../static"), { redirect: false }))
+app.use(express.static("static", { redirect: false }))
 
 // rendering for most files
 app.use(require("./pages.js"))
