@@ -1,83 +1,83 @@
 .container {
-    position: relative;
+  position: relative;
 }
 
 .shadow {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    filter: brightness(50%) saturate(2);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  filter: brightness(50%) saturate(2);
 }
 
 .main {
-    z-index: 2;
-    position: relative;
+  z-index: 2;
+  position: relative;
 }
 
 section {
-    display: grid;
-    grid-template-rows: 130px auto 150px;
-    width: 300px;
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    border-radius: 40px;
-    margin: 20px;
-    border-bottom: 10px solid rgba(0, 0, 0, 0.05);
-    position: relative;
+  display: grid;
+  grid-template-rows: 130px auto 150px;
+  width: 300px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-radius: 40px;
+  margin: 20px;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 h2{
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-    text-transform: capitalize
+  text-align: center;
+  vertical-align: middle;
+  font-size: 30px;
+  text-transform: capitalize
 }
 
 .star-ratings-sprite {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="245"><g color="%23ddd">"><path d="m55,247 74-228 74,228L9,96h240" fill="%23aaa"/><path d="m55,237 74-228 74,228L9,96h240"%20 fill="currentcolor"/></g></svg>') repeat-x;
-    background-size: 20px;
-    font-size: 0;
-    height: 21px;
-    line-height: 0;
-    overflow: hidden;
-    text-indent: -999em;
-    width: 100px;
-    margin: 0 auto;
-    margin-top: -30px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="245"><g color="%23ddd">"><path d="m55,247 74-228 74,228L9,96h240" fill="%23aaa"/><path d="m55,237 74-228 74,228L9,96h240"%20 fill="currentcolor"/></g></svg>') repeat-x;
+  background-size: 20px;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: -30px;
 }
 
 .star-ratings-sprite-rating {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="245"><g color="%23f90"><path d="m55,247 84-228 74,228L9,96h240" fill="%23d80"/><path d="m55,237 74-228 74,228L9,96h240" fill="currentcolor"/></g></svg>') repeat-x;
-    background-size: 20px;
-    float: left;
-    height: 21px;
-    display: block;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="245"><g color="%23f90"><path d="m55,247 84-228 74,228L9,96h240" fill="%23d80"/><path d="m55,237 74-228 74,228L9,96h240" fill="currentcolor"/></g></svg>') repeat-x;
+  background-size: 20px;
+  float: left;
+  height: 21px;
+  display: block;
 }
 
 p {
-    grid-column-end: span 2;
+  grid-column-end: span 2;
 }
 
 p::before {
-    content: "Explination: ";
-    font-weight: bold;
+  content: "Explination: ";
+  font-weight: bold;
 }
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 360px);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 360px);
+  justify-content: center;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 ul {
-    margin-left: -20px
+  margin-left: -20px
 }
 h3 {
-    margin-top: -0.1em;
-    margin-bottom: -0.1em
+  margin-top: -0.1em;
+  margin-bottom: -0.1em
 }

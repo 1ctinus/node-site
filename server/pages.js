@@ -11,18 +11,14 @@ function title(url) {
   return (titleFile[url]) ? titleFile[url] : url + " - 1ctinus.me"
 }
 Router.use(function (req, res, next) {
-  if (redirectdata[req.url]) {
+  redirectdata[req.url] ? 
     res.redirect(301, redirectdata[req.url])
-  } else {
-    next()
-  }
+    : next()
 })
 Router.use(function (req, res, next) {
-  if (fs.existsSync(`views/pages/archive${req.url}.pug`)) {
-    res.redirect(301, "archive" + req.url)
-  } else {
+  fs.existsSync(`views/pages/archive${req.url}.pug`) ?
+    res.redirect(301, "archive" + req.url) :
     next()
-  }
 })
 function defaultRender(
   res, object = {
@@ -50,23 +46,26 @@ Router.get("/", function (req, res) {
 })
 Router.get("/oc|/shots", function (req, res) {
   let files = fs.readdirSync(`../files${req.url}`).reverse()
-  res.send(defaultRender(res, {
+  defaultRender(res, {
     "file": `views/templates${req.url}.pug`,
     "input": files, style: `/css${req.url}.css`
+  })
+})
+Router.get("/devs", function (req, res){
+  var files = fs.readdirSync("../files/devs/")
+  /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
+  let chosenFile = files[Math.floor(Math.random() * files.length)] 
+  res.send(defaultRender(res, {
+    "file": `views/templates${req.url}.pug`,
+    "input": chosenFile,
+    style: `/css${req.url}.css`
   }))
 })
 Router.use(function (req, res) {
-  // checking redirect YAML
-  // Now we get to Pug, main page
   if (fs.existsSync(`views/pages${req.url}.pug`)) {
-    if (fs.existsSync(`data${req.url}.yaml`)) {
-      const file = fs.readFileSync(`data${req.url}.yaml`, "utf8")
-      var parsedFile = JSON.stringify(YAML.parse(file))
-    } else {
-      // eslint-disable-next-line no-redeclare
-      var parsedFile = ""
-      // messy way of not sending anything if there is no YAML.
-    }
+    var parsedFile = fs.existsSync(`data${req.url}.yaml`) ?
+      JSON.stringify(YAML.parse(fs.readFileSync(`data${req.url}.yaml`, "utf8"))): "" 
+
     defaultRender(res, {
       "file": `views/pages${req.url}.pug`,
       "yaml": parsedFile, "style": `/css${req.url}.css`,

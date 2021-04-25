@@ -8,18 +8,15 @@ const useragent = require("useragent")               // Anti IE Jazz
 const IE = function(req, res, next) {
   let agent = useragent.lookup(req.headers["user-agent"])
   // No fun for you if you use IE. 
-  if (agent.family == "IE") {
+  agent.family == "IE" ?
     res.send("IE is not supported on this site, is outdated, and sucks. Please use Chromium/Firefox based browsers. Thanks.")
-  } else {
-    next()
-  }
+    : next()
 }
 const removeSlash = function(req, res, next){
-  if(req.url.match(/\/.*\/$/)){
+  req.url.match(/\/.*\/$/) ?
     res.redirect(301, (req.url).substring(0, (req.url).length - 1))
-  } else {
+    :
     next()
-  }
 }
 Router.use(removeSlash)
 Router.use(IE)
@@ -32,7 +29,7 @@ const limiter = rateLimit({
   }
 })
 Router.post("/request", limiter, function (req, res) {
-  req.body.time = new Date()
+  req.body.time = new Date().toISOString().replace(/.......Z$/, "").replace( "T", " ")
   var site = JSON.parse(fs.readFileSync("data/form.json"))
   site["notes"].push(req.body)
   site["notes"]
@@ -45,32 +42,18 @@ Router.get("/neofetch", function (req, res) {
 
   exec("neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:#f43e5c\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"", (error, stdout, stderr) => {
 
-    if (error) {
-      res.status(500).send(error)
-      return
-    }
-
-    if (stderr) {
-      res.status(500).send(stderr)
-      return
-    }
+    if (error) return res.status(500).send(error)
+    if (stderr) return res.status(500).send(stderr)
     res.render("templates/neofetch", { fetch: stdout })
   })
 })
 Router.get("/changelog", function (req, res) {
 
   exec("git log | grep  --color=never -e \"    \" -e Date", (error, stdout, stderr) => {
-
-    if (error) {
-      res.status(500).send(error)
-      return
-    }
-
-    if (stderr) {
-      res.status(500).send(stderr)
-      return
-    }
-    res.render("templates/changelog", { git: stdout })
+    if (error) return res.status(500).send(error)
+    if (stderr) return res.status(500).send(stderr)
+  
+    return res.render("templates/changelog", { git: stdout })
   })
 })
 Router.get("/css/*.css", function (req,res){

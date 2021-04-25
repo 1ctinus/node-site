@@ -3,7 +3,7 @@ mixin flex-item(caption, url)
     img.img__img(src=url)
     .img__description_layer
       p.img__description #{caption}
-mixin papirus-flex-item(caption=icon, icon, site)
+mixin papirus-flex-item(caption=icon, icon, site = "https://"+caption+".org")
   .img__wrap
     a(href=site)
       img.img__img(src=`https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/${icon}.svg`, width='128px', height='128px')
