@@ -19,7 +19,12 @@ app.set("view engine", "pug")
 
 app.use(require("./router.js"))
 app.use(express.static("static", { redirect: false }))
-
+app.use(function(req, res, next){
+  req.url.match(/\/.*\/$/) ?
+    res.redirect(301, (req.url).substring(0, (req.url).length - 1))
+    :
+    next()
+})
 // rendering for most files
 app.use(require("./pages.js"))
 app.listen(port, hostname, () => {

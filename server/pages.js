@@ -61,7 +61,7 @@ Router.get("/devs", function (req, res){
     style: `/css${req.url}.css`
   }))
 })
-Router.use(function (req, res) {
+Router.use(function (req, res, next) {
   if (fs.existsSync(`views/pages${req.url}.pug`)) {
     var parsedFile = fs.existsSync(`data${req.url}.yaml`) ?
       JSON.stringify(YAML.parse(fs.readFileSync(`data${req.url}.yaml`, "utf8"))): "" 
@@ -72,10 +72,12 @@ Router.use(function (req, res) {
       "title": title(req.url.substring(1))
     })
   } else {
-    res.status(404).send(
-      fs.readFileSync("static/404.html", "utf8")
-    )
+    next()
   }
-  // }
+})
+Router.use(function (req, res){
+  res.status(404).send(
+    fs.readFileSync("static/404.html", "utf8")
+  )
 })
 module.exports = Router

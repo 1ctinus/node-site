@@ -12,13 +12,6 @@ const IE = function(req, res, next) {
     res.send("IE is not supported on this site, is outdated, and sucks. Please use Chromium/Firefox based browsers. Thanks.")
     : next()
 }
-const removeSlash = function(req, res, next){
-  req.url.match(/\/.*\/$/) ?
-    res.redirect(301, (req.url).substring(0, (req.url).length - 1))
-    :
-    next()
-}
-Router.use(removeSlash)
 Router.use(IE)
 
 const limiter = rateLimit({
