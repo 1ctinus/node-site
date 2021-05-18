@@ -1,67 +1,104 @@
 @font-face {
-    font-family: helvetica;
-    src: url('/helvetica.woff')
+  font-family: helvetica;
+  src: url('/helvetica.woff')
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 div#container:hover::-webkit-scrollbar {
-    background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 body {
-    background-color: rgb(134, 0, 51);
-    font-size: 38px;
-    font-weight: bold;
-    font-family: helvetica;
+  background-color: rgb(134, 0, 51);
+  font-size: 38px;
+  font-weight: bold;
+  font-family: helvetica;
 }
 
-.name {
-    /* display: inline; */
-    color: rgb(78, 20, 153);
-    text-shadow: #050014 3px 3px;
+.q {
+  /* display: inline; */
+  color: rgb(82, 123, 197);
 }
 
 .date {
-    color: rgb(108, 203, 184);
-    text-shadow: #131400 3px 3px;
+  color: rgb(168, 59, 123);
+
 }
 
-h2 {
-    font-size: 25px;
-    text-shadow: #140800 3px 3px;
-    color: white;
+h3 {
+  font-size: 25px;
+  color: white;
 }
 
-p {
-    font-size: 20px;
-    text-shadow: rgba(20, 8, 0, 0.5) 3px 3px;
-    color: white;
-    margin-left: 2vw
+p, ul > li {
+  font-size: 20px;
+  color: white;
+  margin-left: 2vw
 }
 
 #tit:hover {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 @media only screen and (max-width: 600px) {
-    .date {
-        display: none
+  .date {
+    display: none
+  }
+  main {
+    width: 100%
+  }
+  body {
+    margin: 0
+  }
+}
+@media only screen and (min-width: 600px){
+  .submitted {
+    margin-left: -20%;
+    margin-right: -20%;
+    padding-left: 20%;
+    padding-right: 20%;
+    clip-path:polygon(90% 0%,10% 0%, 0% 100%, 100% 100%);
+    }
+    main {
+      width: 50%;
+      margin: 0 auto;
+      padding: 0;
     }
 }
-
-article {
-    width: 50%;
-    margin: 0 auto;
-    padding: 0
+.submitted {
+  background-color: rgb(26, 41, 22, 0.3);
+  
+  /* border-bottom: 100px solid red;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent; */
+}
+button {
+  display: block;
+  margin: 0 auto;
+}
+input {
+  display: block;
+  margin: 0 auto;
+}
+.submitted > h3 > .q {
+  color: rgb(177, 62, 62);
+}
+h2 {
+  color: white;
+  font-size: 5vh;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+ul {
+  margin-top: -5px;
 }

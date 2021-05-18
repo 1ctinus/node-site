@@ -19,5 +19,5 @@
 #   site: https://xmonad.org/
 - icon: inkscape
 
-- caption: XFCE 
-  icon: desktop-environment-xfce
+- caption: GNOME 
+  icon: desktop-environment-gnome

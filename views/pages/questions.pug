@@ -1,11 +1,22 @@
-form(action = "/request", method = "POST")
-  input(name = "question" preview = "An interesting title...")
-  button(type = "submit") Ask
 - var json = JSON.parse(yaml)
-article
-  each val, key in json
-    h2
-      span.date= val.time
-      | 
-      span.name= val.question
-    p !{val.answer}
+h1 Questions
+main 
+  section.submitted
+    h2 User Submitted Questions
+    form(action = "/request", method = "POST")
+      input(name = "question" preview = "An interesting title...")
+      button(type = "submit") Ask
+    each val, key in json["user-submitted"]
+      h3
+        span.date= val.time
+        | 
+        span.q= val.q
+      p !{val.a}
+  each value, key in json.self
+    p.date #{key}
+    each val, key in value
+      h3
+        span.date= val.time
+        | 
+        span.q #{val.q}
+      p !{val.a}
