@@ -45,38 +45,17 @@ section {
   background-color: var(--bgcolor);
 }
 
-h1 {
+h1, svg {
   /* margin: auto; */
   text-align: center;
   font-size: 11.5vw;
 }
 
-#svga, #svgb, #svgc {
-  right: 0%;
-  position: absolute;
-  text-align: center;
+ #svga, #svgb, #svgc {
   mix-blend-mode: lighten;
-  vertical-align: top;
   animation: example 2s ease-out 1
-}
+} 
 
-#svga {
-  color: #00f;
-  left: 1%;
-  margin-top: -0.5%;
-}
-
-#svgb {
-  color: #0f0;
-  left: 0%;
-  margin-top: -0%
-}
-
-#svgc {
-  color: #f00;
-  left: -1%;
-  margin-top: 0.5%
-}
 
 h2>* {
   display: inline-block;
