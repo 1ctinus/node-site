@@ -1,5 +1,6 @@
-.container {
+figure {
   position: relative;
+  margin: 0
 }
 
 .shadow {
@@ -64,7 +65,7 @@ p::before {
   font-weight: bold;
 }
 
-.wrapper {
+main {
   display: grid;
   grid-template-columns: repeat(auto-fit, 360px);
   justify-content: center;
@@ -74,10 +75,17 @@ h1 {
   text-align: center;
 }
 
-ul {
+details {
   margin-left: -20px
 }
-h3 {
+summary {
   margin-top: -0.1em;
-  margin-bottom: -0.1em
+  margin-bottom: -0.1em;
+  font-weight: bold;
 }
+/* details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+} */

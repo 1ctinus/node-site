@@ -85,7 +85,8 @@ p, ul > li {
 }
 button {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
+  padding: 5px;
 }
 input {
   display: block;

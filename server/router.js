@@ -40,15 +40,6 @@ Router.get("/neofetch", function (req, res) {
     res.render("templates/neofetch", { fetch: stdout })
   })
 })
-Router.get("/changelog", function (req, res) {
-
-  exec("git log | grep  --color=never -e \"    \" -e Date", (error, stdout, stderr) => {
-    if (error) return res.status(500).send(error)
-    if (stderr) return res.status(500).send(stderr)
-  
-    return res.render("templates/changelog", { git: stdout })
-  })
-})
 Router.get("/css/*.css", function (req,res){
   res.setHeader("content-type", "text/css")
   res.send(new CleanCSS().minify(fs.readFileSync(`views${req.url}`, "utf8")).styles)

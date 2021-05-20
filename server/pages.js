@@ -37,13 +37,6 @@ function defaultRender(
     title: object.title
   })
 }
-Router.get("/", function (req, res) {
-  defaultRender(res, {
-    "file": "views/pages/index.pug",
-    "style": "/css/index.css",
-    "title": "1ctinus' very cool webzone on the internets"
-  })
-})
 Router.get("/oc|/shots", function (req, res) {
   let files = fs.readdirSync(`../files${req.url}`).reverse()
   defaultRender(res, {
@@ -62,6 +55,7 @@ Router.get("/devs", function (req, res){
   }))
 })
 Router.use(function (req, res, next) {
+  if (req.url == "/") req.url = "/index" 
   if (fs.existsSync(`views/pages${req.url}.pug`)) {
     var parsedFile = fs.existsSync(`data${req.url}.yaml`) ?
       JSON.stringify(YAML.parse(fs.readFileSync(`data${req.url}.yaml`, "utf8"))): "" 

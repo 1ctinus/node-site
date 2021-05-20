@@ -172,7 +172,7 @@ nav {
 }
 
 @media (orientation: portrait) {
-  h2
+  .welcome
     {
     display: none;
   }

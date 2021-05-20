@@ -1,30 +1,32 @@
 mixin item(e)
   section
-    .container
+    figure
       if !e.source
-        img.main(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.language+'.svg', width='128', height='128')
-        img.shadow(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.language+'.svg', width='128', height='128')
+        img.main(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.language+'.svg', width='128', height='128', alt = e.language)
+        img.shadow(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.language+'.svg', width='128', height='128' alt = e.language)
       else 
-        img.main(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.source+'.svg', width='128', height='128')
-        img.shadow(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.source+'.svg', width='128', height='128')
+        img.main(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.source+'.svg', width='128', height='128' alt = e.language)
+        img.shadow(src='https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@master/icons/'+ e.source+'.svg', width='128', height='128' alt = e.language)
     .top-right
       h2
         | #{e.language}
       .star-ratings-sprite
         span.star-ratings-sprite-rating(style='width:'+e.rating * 2 + '0%')
     p #{e.reason}
-    ul.pros 
-      h3 Pros:
-      if e.pros
-        each val, _ in e.pros 
-          li #{val}
-    ul.cons 
-      h3 Cons:
-      if e.cons
-        each val, _ in e.cons 
-          li #{val}
+    if e.pros
+      details.pros(open)
+        summary Pros:
+        ul
+          each val, _ in e.pros 
+            li #{val}
+    if e.cons
+      details.cons(open)
+        summary Cons:
+        ul
+          each val, _ in e.cons 
+            li #{val}
 h1 Rating How Much I Want to Learn Languages
-.wrapper
+main
   - var json = JSON.parse(yaml)
   each val, key in json
     +item(val)

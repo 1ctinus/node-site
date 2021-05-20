@@ -5,7 +5,7 @@ section
     span#svga 1ctinus.me
     span#svgb 1ctinus.me
     span#svgc 1ctinus.me
-  h2
+  h2.welcome
     each val, index in "welcome\xa0to\xa0the\xa0bestest\xa0webzone\xa0on\xa0the\xa0internets!".split("")
       span(style="animation-delay:-"+index +"00ms") #{val}
 section(style='--bgcolor: #013')
@@ -21,7 +21,7 @@ section(style='--bgcolor: #013')
   br
   p#output.paragraph
 section(style='--bgcolor: #401')
-  h3(style='font-size:72px;') more hrefs,
+  h2(style='font-size:72px;') more hrefs,
   nav
     br
     -
@@ -31,7 +31,6 @@ section(style='--bgcolor: #401')
         ['discord', 'discord', 'rgb(140, 132, 255)'],
         ['reddit', 'https://reddit.com/user/1ctinus', 'rgb(255, 89, 0);'],
         ['haikus', 'haikus', '#EEFF00',],
-        ['changelog', 'changelog', 'rgb(255, 170, 17)'],
         ['linux', '/linux', ' rgb(255, 190, 153)'],
         ['???', '/questions', "#945681",],
         ['langs', '/langs', '#9da67a'],
@@ -49,4 +48,4 @@ section(style='--bgcolor: #642')
       span.wotw-cyan Of
       span.wotw-blue  The Week!
   a(href='/wotw/todo')
-    img.preview(src='/pics/wotwpreview.png')
+    img.preview(src='/pics/wotwpreview.png' alt="wotw image preview")

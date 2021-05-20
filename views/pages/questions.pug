@@ -4,8 +4,9 @@ main
   section.submitted
     h2 User Submitted Questions
     form(action = "/request", method = "POST")
-      input(name = "question" preview = "An interesting title...")
-      button(type = "submit") Ask
+      label(for = "question") ASK:
+      input#question(name = "question" preview = "An interesting title...")
+      button(type = "submit") Submit
     each val, key in json["user-submitted"]
       h3
         span.date= val.time
