@@ -7,7 +7,7 @@ section
     text#svgc(x = 743 y = 290 font-size="180px" text-anchor="middle" fill="#f00") 1ctinus.me
   h2.welcome
     each val, index in "welcome\xa0to\xa0the\xa0bestest\xa0webzone\xa0on\xa0the\xa0internets!".split("")
-      span(style="animation-delay:-"+index +"00ms") #{val}
+      span(style="--i:-"+index +"00ms") #{val}
 section(style='--bgcolor: #013')
   article
     p Here is my website that looks like it came from 1998, now running on Node.js and Caddy.

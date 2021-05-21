@@ -61,6 +61,7 @@ h2>* {
   display: inline-block;
   padding-top: 11%;
   animation: wave 2s ease-in-out 0s infinite alternate none running;
+  animation-delay: var(--i);
 }
 
 a, u {
