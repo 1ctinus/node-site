@@ -1,3 +1,4 @@
+"use strict"
 const express = require("express")                     // express
 const app = express()                                   // express                          // pug for... pug
 const favicon = require("serve-favicon")

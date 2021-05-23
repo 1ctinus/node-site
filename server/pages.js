@@ -1,8 +1,8 @@
+"use strict"
 const Router = require("express").Router()               // Express
 const fs = require("fs")                                // File System
 const YAML = require("yaml")                           // Data
 const pug = require("pug")                            // Templating
-
 // const CleanCSS = require("clean-css")              // CSS Compression
 var redirectdata = YAML.parse(fs.readFileSync("data/redirects.yaml", "utf8"))
 
@@ -10,12 +10,12 @@ function title(url) {
   const titleFile = YAML.parse(fs.readFileSync("data/titles.yaml", "utf8"))
   return (titleFile[url]) ? titleFile[url] : url + " - 1ctinus.me"
 }
-Router.use(function (req, res, next) {
-  redirectdata[req.url] ? 
+Router.use(function(req, res, next) {
+  redirectdata[req.url] ?
     res.redirect(301, redirectdata[req.url])
     : next()
 })
-Router.use(function (req, res, next) {
+Router.use(function(req, res, next) {
   fs.existsSync(`views/pages/archive${req.url}.pug`) ?
     res.redirect(301, "archive" + req.url) :
     next()
@@ -37,28 +37,28 @@ function defaultRender(
     title: object.title
   })
 }
-Router.get("/oc|/shots", function (req, res) {
+Router.get("/oc|/shots", function(req, res) {
   let files = fs.readdirSync(`../files${req.url}`).reverse()
   defaultRender(res, {
     "file": `views/templates${req.url}.pug`,
     "input": files, style: `/css${req.url}.css`
   })
 })
-Router.get("/devs", function (req, res){
+Router.get("/devs", function(req, res) {
   var files = fs.readdirSync("../files/devs/")
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
-  let chosenFile = files[Math.floor(Math.random() * files.length)] 
+  let chosenFile = files[Math.floor(Math.random() * files.length)]
   res.send(defaultRender(res, {
     "file": `views/templates${req.url}.pug`,
     "input": chosenFile,
     style: `/css${req.url}.css`
   }))
 })
-Router.use(function (req, res, next) {
-  if (req.url == "/") req.url = "/index" 
+Router.use(function(req, res, next) {
+  if (req.url == "/") req.url = "/index"
   if (fs.existsSync(`views/pages${req.url}.pug`)) {
     var parsedFile = fs.existsSync(`data${req.url}.yaml`) ?
-      JSON.stringify(YAML.parse(fs.readFileSync(`data${req.url}.yaml`, "utf8"))): "" 
+      JSON.stringify(YAML.parse(fs.readFileSync(`data${req.url}.yaml`, "utf8"))) : ""
 
     defaultRender(res, {
       "file": `views/pages${req.url}.pug`,
@@ -69,7 +69,7 @@ Router.use(function (req, res, next) {
     next()
   }
 })
-Router.use(function (req, res){
+Router.use(function(req, res) {
   res.status(404).send(
     fs.readFileSync("static/404.html", "utf8")
   )

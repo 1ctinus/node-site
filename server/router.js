@@ -1,3 +1,4 @@
+"use strict"
 const Router = require("express").Router()                      // express                               // express                        // pug for... pug
 const { exec } = require("child_process")             // for neofetc
 const rateLimit = require("express-rate-limit")
@@ -17,11 +18,11 @@ Router.use(IE)
 const limiter = rateLimit({
   windowMs: 12 * 60 * 60 * 1000, // 2 minutes
   max: 10, // limit each IP to 100 requests per windowMs
-  keyGenerator: function (req) {
+  keyGenerator: function(req) {
     return req.headers["cf-connecting-ip"] || req.ip
   }
 })
-Router.post("/request", limiter, function (req, res) {
+Router.post("/request", limiter, function(req, res) {
   req.body.time = new Date().toISOString().replace(/.......Z$/, "").replace( "T", " ")
   var site = JSON.parse(fs.readFileSync("data/form.json"))
   site["notes"].push(req.body)
@@ -31,7 +32,7 @@ Router.post("/request", limiter, function (req, res) {
   res.send("recieved your request!")
 })
 
-Router.get("/neofetch", function (req, res) {
+Router.get("/neofetch", function(req, res) {
 
   exec("neofetch --stdout | sed \"s/\\:/\\:\\<\\/span\\>/g; s/\\-\\$/\\-\\<\\/span\\>/g; s/\\$/\\<br\\>\\<span style=color:#f43e5c\\;\\>/g;  s/- /-\\<\\/span\\>/g;\"", (error, stdout, stderr) => {
 
@@ -40,7 +41,7 @@ Router.get("/neofetch", function (req, res) {
     res.render("templates/neofetch", { fetch: stdout })
   })
 })
-Router.get("/css/*.css", function (req,res){
+Router.get("/css/*.css", function(req,res){
   res.setHeader("content-type", "text/css")
   res.send(new CleanCSS().minify(fs.readFileSync(`views${req.url}`, "utf8")).styles)
 })

@@ -25,6 +25,19 @@
         "semi": [
             "warn",
             "never"
-        ]
+        ],
+        "space-before-function-paren": [
+            "warn",
+            "never"
+        ],
+        // "camelcase": [
+        //     "warn",
+        //     "always"
+        // ],
+        "strict": [
+            "warn",
+            "global"
+        ],
+        "keyword-spacing": ["warn", { "after": true }]
     }
 }
