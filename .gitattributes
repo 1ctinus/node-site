@@ -1,3 +1,5 @@
 static/**/*.html linguist-language=text
 static/**/*.css linguist-language=text
 static/**/*.js linguist-language=text
+views/css/archive/**/*.css linguist-language=text
+views/pages/archive/**.pug linguist-language=text

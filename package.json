@@ -4,7 +4,9 @@
   "description": "thing",
   "main": "./server/index.js",
   "scripts": {
-    "test": "ntest"
+    "test": "ntest",
+    "start": "yarn node .",
+    "debug": "yarn node ."
   },
   "repository": {
     "type": "git",

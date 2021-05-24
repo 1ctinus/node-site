@@ -7,13 +7,13 @@
   site: https://www.mozilla.org/firefox/
 - icon: shotcut
 - icon: vim
-- icon: emacs
-  site: https://www.gnu.org/software/emacs/
+  #- icon: emacs
+  # site: https://www.gnu.org/software/emacs/
 - caption: GIMP
   icon: gimp
-- icon: flameshot
-- icon: Alacritty
-  site: https://github.com/alacritty/alacritty
+  #- icon: flameshot
+  #- icon: Alacritty
+  #site: https://github.com/alacritty/alacritty
 # - caption: Xmonad / Xmobar
 #   icon: applications-haskell
 #   site: https://xmonad.org/
