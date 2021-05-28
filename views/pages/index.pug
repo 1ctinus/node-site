@@ -9,15 +9,15 @@ section
     each val, index in "welcome\xa0to\xa0the\xa0bestest\xa0webzone\xa0on\xa0the\xa0internets!".split("")
       span(style="--i:-"+index +"00ms") #{val}
 section(style='--bgcolor: #013')
-  article
-    p Here is my website that looks like it came from 1998, now running on Node.js and Caddy.
-    p I draw heavy inspirations from bill wurtz, which should be obvious if you look on how I designed
-      |  this very epic webzone. (Although I am always expirementing!)
-    p
-      | This website is always in development, so it will never get &quot;finished&quot;, per se. All of the code is written by me so far.
-    p
-      | I am a hobby developer who has an interest in Linux, and some web dev. I like to hop from different languages. Check out my stuff on github.
-      | This webzone is rather experimental, so that&apos;s why nothing looks very professional nor plain. have a good day.
+  h2 Welcome To My Site!
+  p Here is my website that looks like it came from 1998, now running on Node.js and Caddy.
+  p I draw heavy inspirations from bill wurtz, which should be obvious if you look on how I designed
+    |  this very epic webzone. (Although I am always expirementing!)
+  p
+    | This website is always in development, so it will never get &quot;finished&quot;, per se. All of the code is written by me so far.
+  p
+    | I am a hobby developer who has an interest in Linux, and some web dev. I like to hop from different languages. Check out my stuff on github.
+    | This webzone is rather experimental, so that&apos;s why nothing looks very professional nor plain. have a good day.
   br
   p#output.paragraph
 section(style='--bgcolor: #401')
@@ -37,9 +37,8 @@ section(style='--bgcolor: #401')
         ['github','https://github.com/1ctinus','#6F63B5']]
     each object in data2
       +menutext(object[0], object[1], object[2])
-    +menutext()
 section(style='--bgcolor: #642')
-  p(style='font-size:7w;')
+  h2
     br
     br
     | Check out the 
