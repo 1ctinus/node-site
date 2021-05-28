@@ -8,7 +8,7 @@ html(lang="en")
         link#css(rel='stylesheet', href=style)
         title #{title}
         style.
-            html {scrollbar-color:  rgba(0, 0, 0, 0.5) transparent;}
+            @-moz-document url-prefix(){html{scrollbar-color:rgba(0,0,0,0.5)transparent;}}
         meta(charset='UTF-8')
         meta(name='author', content='1ctinus')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')

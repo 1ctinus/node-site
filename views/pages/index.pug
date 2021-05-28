@@ -1,5 +1,5 @@
-mixin menutext(title, href, color, shadowColor)
-  a(style='text-shadow: '+shadowColor+' 6px 6px;color: '+color, href=href) #{title} 
+mixin menutext(title, href, color)
+  a(style='color:'+color, href=href) #{title} 
 section
   svg(viewbox = "0 0 1500 300" text-anchor="middle")
     text#svga(x = 757 y = 276 font-size="180px" text-anchor="middle" fill="#00f") 1ctinus.me
@@ -21,7 +21,7 @@ section(style='--bgcolor: #013')
   br
   p#output.paragraph
 section(style='--bgcolor: #401')
-  h2(style='font-size:72px;') more hrefs,
+  h2(style='font-size:5vh;') more hrefs,
   nav
     br
     -
@@ -39,7 +39,7 @@ section(style='--bgcolor: #401')
       +menutext(object[0], object[1], object[2])
     +menutext()
 section(style='--bgcolor: #642')
-  p(style='font-size:72px;')
+  p(style='font-size:7w;')
     br
     br
     | Check out the 

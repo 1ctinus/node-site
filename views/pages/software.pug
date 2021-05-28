@@ -6,18 +6,18 @@ mixin flex-item(caption, url)
 mixin papirus-flex-item(caption=icon, icon, site = "https://"+caption+".org")
   .img__wrap
     a(href=site)
-      img.img__img(src=`https://cdn.jsdelivr.net/gh//PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/64x64/apps/${icon}.svg`, width='128px', height='128px' alt = caption)
+      img.img__img(src=`https://cdn.jsdelivr.net/gh//PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/64x64/apps/${icon}.svg`, width='128', height='128' alt = caption)
       .img__description_layer
         p.img__description #{caption}
-body
-  h1 Software I am Using:
-  .flex-container
-    - var json = JSON.parse(yaml)
-    each val, key in json
-      - if(val.caption)
-        +papirus-flex-item(val.caption, val.icon, val.site)
-      - else
-        +papirus-flex-item(val.icon, val.icon, val.site)
-  footer
-    a(href='https://github.com/PapirusDevelopmentTeam/papirus-icon-theme') 
-      | Special thanks to papirus for the wonderful icons. Check them out!
+
+h1 Software I am Using:
+.flex-container
+  - var json = JSON.parse(yaml)
+  each val, key in json
+    - if(val.caption)
+      +papirus-flex-item(val.caption, val.icon, val.site)
+    - else
+      +papirus-flex-item(val.icon, val.icon, val.site)
+footer
+  a(href='https://github.com/PapirusDevelopmentTeam/papirus-icon-theme') 
+    | Special thanks to papirus for the wonderful icons. Check them out!
