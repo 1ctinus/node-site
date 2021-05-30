@@ -1,6 +1,13 @@
 h1
   span.a &apos;
   span.b Shots
-each val,key in input
-  h2= val.split('.')[0]
-  img(src='https://files.1ctinus.me/shots/' + val)
+if input[1] !=  "?list=true"
+  header too slow? <a id="footer-link" href="./shots?list=true">check out speedy mode.</a>
+  each val,key in input[0]
+    time= val.split('.')[0]
+    img(src='https://files.1ctinus.me/shots/' + val)
+else
+  ul
+    each val,key in input[0]
+      li: a(href='https://files.1ctinus.me/shots/' + val)= val.split('.')[0]
+  footer too boring? <a id="footer-link" href="./shots">check out normal mode.</a>

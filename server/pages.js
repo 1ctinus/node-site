@@ -1,5 +1,6 @@
 "use strict"
 const Router = require("express").Router()               // Express
+const url = require('url');
 const fs = require("fs")                                // File System
 const YAML = require("yaml")                           // Data
 const pug = require("pug")                            // Templating
@@ -38,10 +39,13 @@ function defaultRender(
   })
 }
 Router.get("/oc|/shots", function(req, res) {
-  let files = fs.readdirSync(`../files${req.url}`).reverse()
+  let urlNoQuery = req.url.split('?')[0]
+  let parsedUrl = new URL(req.url,'http://' + req.headers.host + '/');
+  let files = fs.readdirSync(`../files${urlNoQuery}`).reverse()
   defaultRender(res, {
-    "file": `views/templates${req.url}.pug`,
-    "input": files, style: `/css${req.url}.css`
+    "file": `views/templates${urlNoQuery}.pug`,
+    "input": [files, parsedUrl.search], style: `/css${urlNoQuery}.css`,
+    "title": title(urlNoQuery.substring(1))
   })
 })
 Router.get("/devs", function(req, res) {

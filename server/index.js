@@ -10,7 +10,7 @@ const hostname = "localhost"
 app.use(express.json({ limit: "1kb" }))
 
 // for parsing application/xwww-
-app.use(express.urlencoded({ limit: "1kb", extended: true }))
+app.use(express.urlencoded({ limit: "1kb", extended: false /*i set it to true before*/ }))
 //form-urlencoded
 // for parsing multipart/form-data
 app.use(upload.array())

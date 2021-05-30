@@ -17,11 +17,20 @@ h1{
     text-shadow: #0c070c 6px 6px;
 }
 
-h2{
+time{
     margin-left: 5%;
     font-size: 60px;
     color: #9b8641;
     text-shadow: #0b010c 5px 5px;
+}
+ul, a:not(#footer-link){
+    margin-left: 5%;
+    font-size: 1.4em;
+    text-shadow: #0b010c 2px 2px;
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
 }
 
 img {
@@ -33,4 +42,15 @@ img {
 .legal {
     color: red;
     font-size: 20px;
+}
+footer, header {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+:link:hover {
+    color:lime
+}
+a:not(:hover) {
+    color: white
 }
