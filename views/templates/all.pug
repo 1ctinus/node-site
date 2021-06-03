@@ -1,0 +1,17 @@
+h1 ALL
+if input[1] !=  "?list=true"
+  header too slow? <a id="footer-link" href="./all?list=true">check out speedy mode.</a>
+  each val,key in input[0]
+    if val.split('/')[0] == "oc"
+      time.oc #{val.split('.')[0].split('/')[1]}
+    else
+      time.shots #{val.split('.')[0].split('/')[1]}
+    img(src='https://files.1ctinus.me/' + val)
+else
+  ul
+    each val,key in input[0]
+      if val.split('/')[0] == "oc"
+        li: a.oc(href='https://files.1ctinus.me/' + val) #{val.split('.')[0].split('/')[1]}
+      else 
+        li: a.shots(href='https://files.1ctinus.me/' + val) #{val.split('.')[0].split('/')[1]}
+  footer too boring? <a id="footer-link" href="./all">check out normal mode.</a>

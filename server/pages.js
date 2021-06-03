@@ -11,12 +11,12 @@ function title(url) {
   const titleFile = YAML.parse(fs.readFileSync("data/titles.yaml", "utf8"))
   return (titleFile[url]) ? titleFile[url] : url + " - 1ctinus.me"
 }
-Router.use(function(req, res, next) {
+Router.use(function (req, res, next) {
   redirectdata[req.url] ?
     res.redirect(301, redirectdata[req.url])
     : next()
 })
-Router.use(function(req, res, next) {
+Router.use(function (req, res, next) {
   fs.existsSync(`views/pages/archive${req.url}.pug`) ?
     res.redirect(301, "archive" + req.url) :
     next()
@@ -31,16 +31,16 @@ function defaultRender(
   res.render("templates/template.pug", {
     file: pug.renderFile(
       object.file, {
-        yaml: object.yaml,
-        input: object.input
-      }),
+      yaml: object.yaml,
+      input: object.input
+    }),
     style: object.style,
     title: object.title
   })
 }
-Router.get("/oc|/shots", function(req, res) {
+Router.get("/oc|/shots", function (req, res) {
   let urlNoQuery = req.url.split('?')[0]
-  let parsedUrl = new URL(req.url,'http://' + req.headers.host + '/');
+  let parsedUrl = new URL(req.url, 'http://' + req.headers.host + '/');
   let files = fs.readdirSync(`../files${urlNoQuery}`).reverse()
   defaultRender(res, {
     "file": `views/templates${urlNoQuery}.pug`,
@@ -48,7 +48,24 @@ Router.get("/oc|/shots", function(req, res) {
     "title": title(urlNoQuery.substring(1))
   })
 })
-Router.get("/devs", function(req, res) {
+Router.get("/all", function (req, res) {
+  let urlNoQuery = req.url.split('?')[0]
+  let parsedUrl = new URL(req.url, 'http://' + req.headers.host + '/');
+  let files = fs.readdirSync(`../files/oc`)
+  // jesus christ
+  .map(x => "oc/" + x)
+  .concat(fs.readdirSync(`../files/shots`)
+  .map(x => "shots/" + x))
+  .sort((a, b) => a.split('/')[1]
+  .localeCompare(b.split('/')[1]))
+  .reverse()
+  defaultRender(res, {
+    "file": `views/templates${urlNoQuery}.pug`,
+    "input": [files, parsedUrl.search], style: `/css${urlNoQuery}.css`,
+    "title": title(urlNoQuery.substring(1))
+  })
+})
+Router.get("/devs", function (req, res) {
   var files = fs.readdirSync("../files/devs/")
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
   let chosenFile = files[Math.floor(Math.random() * files.length)]
@@ -58,7 +75,7 @@ Router.get("/devs", function(req, res) {
     style: `/css${req.url}.css`
   }))
 })
-Router.use(function(req, res, next) {
+Router.use(function (req, res, next) {
   if (req.url == "/") req.url = "/index"
   if (fs.existsSync(`views/pages${req.url}.pug`)) {
     var parsedFile = fs.existsSync(`data${req.url}.yaml`) ?
@@ -73,7 +90,7 @@ Router.use(function(req, res, next) {
     next()
   }
 })
-Router.use(function(req, res) {
+Router.use(function (req, res) {
   res.status(404).send(
     fs.readFileSync("static/404.html", "utf8")
   )
