@@ -1,18 +1,21 @@
 @font-face {
-    font-family: fira;
-    src: url('https://raw.githubusercontent.com/mozilla/Fira/master/woff/FiraMono-Bold.woff');
-  }
+  font-family: fira;
+  src: url('https://raw.githubusercontent.com/mozilla/Fira/master/woff/FiraMono-Bold.woff');
+}
+
 body {
-    background-color: #10121b;
+  background-color: #10121b;
 }
+
 etc, p {
-    color: #eeeeee;
-    font-family: fira, monospace;
-    font-size: 22px;
-    display: inline-block;
-    vertical-align:top;
+  color: #eeeeee;
+  font-family: fira, monospace;
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: top;
 }
+
 etc {
-    white-space: pre;
-    color: #dddddd;
+  white-space: pre;
+  color: #dddddd;
 }

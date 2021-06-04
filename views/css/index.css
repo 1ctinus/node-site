@@ -51,11 +51,10 @@ h1, svg {
   font-size: 11.5vw;
 }
 
- #svga, #svgb, #svgc {
+#svga, #svgb, #svgc {
   mix-blend-mode: lighten;
   animation: example 2s ease-out 1
-} 
-
+}
 
 .welcome>* {
   display: inline-block;
@@ -149,8 +148,7 @@ nav {
 }
 
 @media (orientation: portrait) {
-  .welcome
-    {
+  .welcome {
     display: none;
   }
 }
@@ -158,6 +156,7 @@ nav {
 nav>a:active {
   color: white !important;
 }
+
 .wotw-blue {
   color: #3474ff;
 }

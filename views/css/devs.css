@@ -1,32 +1,32 @@
 html, body {
-    height: 100%;
-    margin: 0
+  height: 100%;
+  margin: 0
 }
 body {
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @font-face {
-    font-family: Impact;
-    src: url(https://cdn.jsdelivr.net/gh/sophilabs/macgifer@master/static/font/impact.woff);
+  font-family: Impact;
+  src: url(https://cdn.jsdelivr.net/gh/sophilabs/macgifer@master/static/font/impact.woff);
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 5px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 5px;
 }
 
 footer, #meme {
-    text-align: center
+  text-align: center
 }
 
 #meme {
-    font-family: Impact;
-    color: white;
-    text-shadow: 0.04em 0.04em 0.075em #000, -0.04em -0.04em 0.075em #000, -0.04em 0.04em 0.075em #000, 0.04em -0.04em 0.075em #000;
-    font-size: 40px;
-    text-transform: uppercase
+  font-family: Impact;
+  color: white;
+  text-shadow: 0.04em 0.04em 0.075em #000, -0.04em -0.04em 0.075em #000, -0.04em 0.04em 0.075em #000, 0.04em -0.04em 0.075em #000;
+  font-size: 40px;
+  text-transform: uppercase
 }

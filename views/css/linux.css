@@ -1,36 +1,41 @@
 @font-face {
-    font-family: helvetica;
-    src: url('/helvetica.woff');
-    }
+  font-family: helvetica;
+  src: url('/helvetica.woff');
+}
+
 * {
-    color:#fff;
-    background-color: #16181b;
+  color: #fff;
+  background-color: #16181b;
 }
+
 footer, h3 {
-    text-align: center;
-    font-size: 25px;
-    font-family: helvetica; 
+  text-align: center;
+  font-size: 25px;
+  font-family: helvetica;
 }
+
 h2 {
-    text-align: center;
-    font-family: helvetica; 
-    font-size: 150px;
-    transform: rotate(180deg);
-    margin: -20px 0px;
-    text-shadow: #060607 -4px -4px;
+  text-align: center;
+  font-family: helvetica;
+  font-size: 150px;
+  transform: rotate(180deg);
+  margin: -20px 0px;
+  text-shadow: #060607 -4px -4px;
 }
+
 p {
-    font-size:20px;
-    margin-left: 15%;
-    margin-right: 15%;
-    font-family: sans-serif;
-    text-indent: 50px;
-    text-shadow: #060607 1px 1px;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: sans-serif;
+  text-indent: 50px;
+  text-shadow: #060607 1px 1px;
 }
+
 img {
-    width: 80%;
-    margin-top:100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 80%;
+  margin-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

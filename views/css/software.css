@@ -62,9 +62,11 @@ html {
   transition: .2s;
   transform: translateY(1em);
 }
+
 .img__description::first-letter {
   text-transform: uppercase;
 }
+
 .img__wrap:hover .img__description {
   transform: translateY(0);
 }

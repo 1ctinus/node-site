@@ -37,8 +37,9 @@ a:link {
 img {
     margin-left: 10%;
     width: min(1000px, 80vw);
-     height:50vh;
+    height:50vh;
     object-fit: contain;
+    background-color: rgba(0,0,0,0.1);
 }
 
 .legal {

@@ -1,46 +1,53 @@
 @font-face {
-    font-family: helvetica;
-    src: url('/helvetica.woff');
-    }
+  font-family: helvetica;
+  src: url('/helvetica.woff');
+}
+
 body {
-    color:#fff;
-    background-color: #163020;
+  color: #fff;
+  background-color: #163020;
 }
+
 footer, h3 {
-    text-align: center;
-    font-size: 25px;
-    font-family: helvetica; 
+  text-align: center;
+  font-size: 25px;
+  font-family: helvetica;
 }
+
 h2 {
-    text-align: center;
-    font-family: helvetica; 
-    font-size: 150px;
-    transform: rotate(180deg);
-    margin: -20px 0px;
-    text-shadow: #060607 -4px -4px;
+  text-align: center;
+  font-family: helvetica;
+  font-size: 150px;
+  transform: rotate(180deg);
+  margin: -20px 0px;
+  text-shadow: #060607 -4px -4px;
 }
+
 p, li {
-    font-size:20px;
-    margin-left: 15%;
-    margin-right: 15%;
-    font-family: sans-serif;
-    text-indent: 50px;
-    text-shadow: #060607 1px 1px;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: sans-serif;
+  text-indent: 50px;
+  text-shadow: #060607 1px 1px;
 }
+
 img {
-    width: 80%;
-    margin-top:100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 80%;
+  margin-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 etc {
-    white-space: pre;
-    margin-left: 50px;
+  white-space: pre;
+  margin-left: 50px;
 }
+
 .program {
-    background-color: #0d1a12;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 50px;
+  background-color: #0d1a12;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 50px;
 }
