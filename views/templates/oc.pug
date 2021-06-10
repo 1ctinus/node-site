@@ -8,7 +8,7 @@ if input[1] !=  "?list=true"
   each val,key in input[0]
     time= val.split('.')[0]
     a(href=url + val)
-      img(src=url + val alt= 'Original Content finished at ' + val.split('.')[0])
+      img(src=url + val+ "?w=1000&h=1000" alt= 'Original Content finished at ' + val.split('.')[0])
 else
   ul
     each val,key in input[0]

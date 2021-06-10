@@ -6,7 +6,7 @@ if input[1] !=  "?list=true"
       time.oc #{val.split('.')[0].split('/')[1]}
     else
       time.shots #{val.split('.')[0].split('/')[1]}
-    img(src='https://files.1ctinus.me/' + val)
+    a(href=url + val): img(src='https://files.1ctinus.me/' + val + "?w=1000&h=1000" alt="Date:" + val.split('.')[0].split('/')[1])
 else
   ul
     each val,key in input[0]

@@ -9,14 +9,14 @@ h1 {
 }
 
 time {
-  margin-left: 5%;
+  /* margin-left: 5%; */
   font-size: 60px;
   color: #af1cbc;
   display: block;
 }
 
 img {
-  margin-left: 10%;
+  margin-left: 5%;
   width: min(80vw, 1000px);
   height: 50vh;
   object-fit: contain;

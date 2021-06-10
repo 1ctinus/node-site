@@ -1,59 +1,59 @@
 body {
-    background-color: #005929;
-    font-family: Helvetica, sans-serif
+  background-color: #005929;
+  font-family: Helvetica, sans-serif
 }
 
 h1{
-    font-size: 90px;
+  font-size: 90px;
 }
 
 .a {
-    color: #cf65bc;
-    text-shadow: #0c0909 6px 6px;
+  color: #cf65bc;
+  text-shadow: #0c0909 6px 6px;
 }
 
 .b {
-    color: #ff3200;
-    text-shadow: #0c070c 6px 6px;
+  color: #ff3200;
+  text-shadow: #0c070c 6px 6px;
 }
 
 time{
-    display: block;
-    margin-left: 5%;
-    font-size: 60px;
-    color: #9b8641;
-    text-shadow: #0b010c 5px 5px;
+  display: block;
+  /* margin-left: 5%; */
+  font-size: 60px;
+  color: #9b8641;
+  text-shadow: #0b010c 5px 5px;
 }
 ul, a:not(#footer-link){
-    margin-left: 5%;
-    font-size: 1.4em;
-    text-shadow: #0b010c 2px 2px;
-    text-decoration: none;
+  margin-left: 5%;
+  font-size: 1.4em;
+  text-shadow: #0b010c 2px 2px;
+  text-decoration: none;
 }
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    margin-left: 10%;
-    width: min(1000px, 80vw);
-    height:50vh;
-    object-fit: contain;
-    background-color: rgba(0,0,0,0.1);
+  margin-left: 5%;
+  width: min(1000px, 80vw);
+  height:50vh;
+  object-fit: contain;
+  background-color: rgba(0,0,0,0.1);
 }
 
 .legal {
-    color: red;
-    font-size: 20px;
+  color: red;
+  font-size: 20px;
 }
 footer, header {
-    color: white;
-    text-align: center;
-    font-size: 1.2em;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
 }
 :link:hover {
-    color:lime
+  color:lime
 }
 a:not(:hover) {
-    color: white
+  color: white
 }
