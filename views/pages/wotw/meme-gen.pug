@@ -1,0 +1,21 @@
+h1 Saturday Meme Machine
+h2 6/12/2021
+main
+  section#canvas
+    canvas#myCanvas(width=500 height=800 draggable='true')
+      | Your browser does not support the canvas element.
+  section#settings
+    label(for="top-text") Top Text:
+    textarea(type=text id="top-text" value="top text")
+    label(for="top-text") Bottom Text:
+    textarea(type=text id="bottom-text" value="bottom text")
+    button(onclick='document.querySelector("#file").click()') Chose File...
+    button#save Save
+    span.checkbox
+      input#caps(type="checkbox" value=caps checked)
+      label(for=caps) ALL CAPS?
+    input#url(placeholder="URL goes here...." type="text")
+    button#url-submit Submit URL
+    input#font-size(type="range" value = 50 min=1 max=200 step=2)
+input(type='file', id="file")
+script(src='/js/meme-gen.js' )
