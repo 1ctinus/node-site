@@ -1,0 +1,47 @@
+@font-face {
+  font-family: helvetica;
+  src: '/helvetica.woff'
+}
+* {box-sizing: border-box;}
+.color {
+  background-color: var(--i);
+  width: 25px;
+}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: crosshair;
+  /*Set the size of the magnifier glass:*/
+  width: 150px;
+  height: 150px;
+  image-rendering: crisp-edges;
+}
+
+body {
+  background-color: green;
+  font-family: helvetica;
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+input, button {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: none;
+}
+button {
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+button:active{
+    border-top: 2px solid green;
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.15);
+}

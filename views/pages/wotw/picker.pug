@@ -1,0 +1,19 @@
+h1 Saturday Color Picker
+.img-magnifier-container
+  canvas#example(width='500', height='800')
+table
+  tr
+  td#color-pre(class='color')
+  td#hex
+  td#rgb
+input#url(placeholder='URL goes here....', type='text')
+button#url-submit Submit URL
+BR
+label(for = "size") Magnifying Glass size
+input#size(type="range" value = 150 min=25 max=350 step=5)
+h2 Saved Colors:
+table#saved
+p thanks to <a href="https://bl.ocks.org/wayneburkett/ca41a5245a9f48766b7bc881448f9203">Wayne Burkett</a> and 
+  | <a href="https://www.w3schools.com/colors/colors_picker.asp"> W3schools</a>
+  | for some of the code.
+script(src="/js/picker.js")

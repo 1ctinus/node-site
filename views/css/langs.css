@@ -84,7 +84,9 @@ summary {
   margin-bottom: -0.1em;
   font-weight: bold;
 }
-
+body {
+font-family: 'Verdana', sans-serif;
+}
 /* details > summary {
   list-style: none;
 }

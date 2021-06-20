@@ -93,7 +93,7 @@ document.getElementById("save").addEventListener("click",
     let downloadLink = document.createElement('a');
     downloadLink.setAttribute('download', 'meme.png');
     let dataURL = canvas.toDataURL('image/png');
-    let url = dataURL.replace(/^data:image\/png/, 'data:application/octet-stream');
+    let url = dataURL
     downloadLink.setAttribute('href', url);
     downloadLink.click();
   }
