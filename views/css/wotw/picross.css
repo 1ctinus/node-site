@@ -1,0 +1,18 @@
+@font-face {
+    font-family: helvetica;
+    src: '/helvetica.woff'
+}
+canvas {
+    border: none
+}
+body {
+    background-color: #800000;
+    font-family: helvetica;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: white
+}
+#congrats {
+    color: green
+}
