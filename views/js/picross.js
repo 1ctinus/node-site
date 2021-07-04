@@ -29,13 +29,13 @@ for (rr = 0; rr < data.length; rr++) {
     if (data[rr][qq] == 1) {
       if (data[rr][qq - 1] != 1) {
         comp[rr].push(0)
-        console.log("DBG POINT #1")
+        //console.log("DBG POINT #1")
       }
       comp[rr][comp[rr].length - 1]++
     }
   }
 }
-console.log(comp)
+//console.log(comp)
 let comp2 = [];
 for (ss = 0; ss < data.length; ss++) {
   comp2.push([])
@@ -53,7 +53,7 @@ for (ss = 0; ss < data.length; ss++) {
     }
   }
 }
-console.log(comp2)
+//console.log(comp2)
 ctx.fillStyle = "#FFF";
 ctx.font = "20px Arial";
 ctx.textAlign = "end";
@@ -85,13 +85,13 @@ let userArray = new Array(data.length)
 for (uu = 0; uu < userArray.length; uu++){
 userArray[uu] = new Array(data.length).fill(0)
 }
-console.log(userArray)
+//console.log(userArray)
 function complete (){
   document.querySelector("#congrats").innerHTML = "You completed the puzzle! &#128077;"
 }
 function userArrayUpdate (inpX, inpY, val){
-  console.log(Math.floor((inpY - 105) / 30))
-  console.log(userArray[Math.floor((inpY - 105) / 30)][Math.floor((inpX - 105) / 30)])
+  //console.log(Math.floor((inpY - 105) / 30))
+  //console.log(userArray[Math.floor((inpY - 105) / 30)][Math.floor((inpX - 105) / 30)])
   userArray[Math.floor((inpY - 105) / 30)] [Math.floor((inpX - 105) / 30)]  = val
   if(JSON.stringify(userArray) == JSON.stringify(data)){
     complete()
@@ -130,7 +130,7 @@ c.addEventListener("contextmenu", function (e) {
   if (x >= 105 && y >= 105 && x <= (30 * data.length + 100) && y <= (30 * data.length + 100)) {
     let j = 105 + 30 * Math.floor((x - 105) / 30)
     let i = 105 + 30 * Math.floor((y - 105) / 30)
-    console.log(i)
+    //console.log(i)
     ctx.fillStyle = "#800000";
     ctx.fillRect(105 + 30 * Math.floor((x - 105) / 30), 105 + 30 * Math.floor((y - 105) / 30), 25, 25);
     ctx.strokeStyle = "#EBB";

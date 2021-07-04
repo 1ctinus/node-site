@@ -1,0 +1,34 @@
+h1 Saturday Pie Chart Maker
+canvas(id="myCanvas" width="800" height="800")
+input#title(value = "Title")
+table 
+  thead 
+    tr 
+      th Name 
+      th Value 
+      th Color
+      //- th Color 
+  tbody 
+    tr 
+      td 
+        input(value ="No. 1")
+      td 
+        input(value=2)
+      td
+        input(value="#F32")
+    tr 
+      td 
+        input(value ="No. 2")
+      td 
+        input(value=3)
+      td
+        input(value="#36F")
+    tr 
+      td 
+        input(value ="No. 3")
+      td 
+        input(value=2)
+      td
+        input(value="#7F8")
+button#add Add new.. 
+script(src="/js/pie.js")
