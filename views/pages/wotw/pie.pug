@@ -1,6 +1,7 @@
 h1 Saturday Pie Chart Maker
-canvas(id="myCanvas" width="800" height="800")
-input#title(value = "Title")
+canvas(id="myCanvas" width="800" height="600")
+label Title:
+input#title(value = "My Pie Chart")
 table 
   thead 
     tr 
@@ -29,6 +30,7 @@ table
       td 
         input(value=2)
       td
-        input(value="#7F8")
+        input(value="#4C2")
 button#add Add new.. 
+button#save Save 
 script(src="/js/pie.js")
