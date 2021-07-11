@@ -2,9 +2,9 @@ mixin menutext(title, href, color)
   a(style='color:'+color, href=href) #{title} 
 section
   svg(viewbox = "0 0 1500 300" text-anchor="middle")
-    text#svga(x = 757 y = 276 font-size="180px" text-anchor="middle" fill="#00f") 1ctinus.me
-    text#svgb(x = 750 y = 283 font-size="180px" text-anchor="middle" fill="#0f0") 1ctinus.me
-    text#svgc(x = 743 y = 290 font-size="180px" text-anchor="middle" fill="#f00") 1ctinus.me
+    text#svga(x = 757 y = 276 font-size="180px" text-anchor="middle" fill="#00f") #[tspan 1]ctinus.me
+    text#svgb(x = 750 y = 283 font-size="180px" text-anchor="middle" fill="#0f0") #[tspan 1]ctinus.me
+    text#svgc(x = 743 y = 290 font-size="180px" text-anchor="middle" fill="#f00") #[tspan 1]ctinus.me
   h2.welcome
     each val, index in "welcome\xa0to\xa0the\xa0bestest\xa0webzone\xa0on\xa0the\xa0internets!".split("")
       span(style="--i:-"+index +"00ms") #{val}
@@ -22,8 +22,7 @@ section(style='--bgcolor: #013')
   p#output.paragraph
 section(style='--bgcolor: #401')
   h2(style='font-size:5vh;') more hrefs,
-  nav
-    br
+  nav #[br]
     -
       var data2 = [
         ['pics', '/pics', 'rgb(255, 0, 106)', ],
@@ -38,13 +37,7 @@ section(style='--bgcolor: #401')
     each object in data2
       +menutext(object[0], object[1], object[2])
 section(style='--bgcolor: #510')
-  h2
-    br
-    br
-    | Check out the 
-    a(href='wotw')
-      span.wotw-blue Website 
-      span.wotw-cyan Of
-      span.wotw-blue  The Week!
+  h2 #[br] #[br] Check out the 
+    a(href='wotw') #[span.wotw-blue Website] #[span.wotw-cyan Of] #[span.wotw-blue  The Week!]
   a(href='/wotw/picross')
     img.preview(src='/pics/wotwpreview.png' alt="wotw image preview")

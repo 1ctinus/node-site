@@ -1,0 +1,16 @@
+h1 Saturday Clock for the Wurtz
+canvas(width = '500' height = '500')
+section#controls
+    input#snap(type="checkbox" value=caps checked)
+    label(for=caps) Snapped?
+    br
+    <input type="color" value="#000000" id="color">
+    label(for=color) Color
+    br
+    input#seconds(type="checkbox" value=seconds)
+    label(for=caps) Seconds?
+    br
+    input#digits(type="checkbox")
+    label(for=digits) Digit Labels?
+    br
+script(src='/js/clock.js')

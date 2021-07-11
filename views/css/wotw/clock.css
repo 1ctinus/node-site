@@ -1,0 +1,55 @@
+@font-face {
+    font-family: inter;
+    src: '/fonts/inter.woff';
+}
+
+body {
+    font-family: inter;
+    margin: 0
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    background-color: black;
+    margin: 0;
+    padding: 20px
+}
+
+canvas {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: min(100vw, 500px)
+}
+
+#controls {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: black;
+    margin: 0;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+label {
+    font-family: inter;
+}
+
+input[type="checkbox"] {
+    filter: invert(1);
+}
+
+input[type="color"] {
+    border: none;
+    outline: none;
+    padding: 0;
+    height: 13px;
+    width: 23px
+}

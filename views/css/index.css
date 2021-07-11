@@ -55,7 +55,10 @@ h1, svg {
   mix-blend-mode: lighten;
   animation: example 2s ease-out 1
 }
-
+tspan {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
 .welcome>* {
   display: inline-block;
   padding-top: 11%;
